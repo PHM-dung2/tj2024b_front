@@ -94,7 +94,10 @@ body{ font-family: "Noto Sans KR"; sans-serif;}
     width: 150px; border-bottom: 1px solid black;
     display: flex; margin-right: 30px;
 }
-#searchinput{ border: none; width: 120px;}
+#searchinput{ 
+    border: none; width: 120px;
+    background-color: transparent; /* input 상자 배경 투명하게 */
+}
 #searchimg{ display: block; margin-right: 30px;}
 
 
