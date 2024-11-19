@@ -1,3 +1,13 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-kr-<uniquifier> {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 *{  
     /* border: 1px solid red; */
     padding: 0px; margin: 0px;
@@ -5,6 +15,8 @@
 }
 a{ color: black; text-decoration: none;}
 li{ list-style-type: none;}
+
+body{ font-family: "Noto Sans KR"; sans-serif;}
 
 /* ====================헤더==================== */
 #wrap{ align-items: center;}
@@ -17,7 +29,7 @@ li{ list-style-type: none;}
 #topmenu > div > ul > li{ 
     font-family: "ProximaNova-Regular"; font-size: 12px;
     display: flex; justify-content: space-between; 
-    margin: 0px 9px; padding: 15px 0px;
+    margin: 0px 7px; padding: 15px 0px;
 }
 #newjoin{ font-weight: bold; background-color: #f5ff6b;}
 #topmenu > div > ul > li > a > img{ 
@@ -26,8 +38,7 @@ li{ list-style-type: none;}
 }
 
 #stickyheader{
-    font-family: "Noto Sans KR";
-    width: 100%; background-color: white; opacity: 80%;
+    width: 100%; background-color: rgba(255, 255, 255, 0.8); /* 부모만 투명도 줄 시엔 rgb (x,x,x,투명도) */
     position: sticky; top: 0px; 
     padding: 10px 20px;
 }
@@ -43,39 +54,149 @@ li{ list-style-type: none;}
     font-size: 12px;
     display: flex; 
 }
-#headermenu > ul{ display: flex; justify-content: space-between; width: 1150px;}
-#headermenu .menu{ padding: 10px; position: relative; padding-top: 22px;}
+#headermenu > ul{ 
+    display: flex;
+    width: 1100px;
+}
+#headermenu .menu{
+    width: 78px;  
+    padding-top: 22px;
+    position: relative;
+    text-align: center;
+}
 #headermenu .submenu{ 
     display: none;
     position: absolute;
-    background-color: white;
-    padding: 20px;
-    top: 50px;
-    left: -20px;
+    padding: 10px;
+    top: 70px;
+    left: -21px;
     width: 120px;
     text-align: center;
     line-height: 200%;
+    background-color: white; 
 }
 #headermenu .menu:hover .submenu{ display: block;}
+.menu > a:hover{ color: #a1a1a1;}
 
-#menusale{ color: red;}
-#blackF{ color: red; font-weight: bolder;}
-#style{ font-weight: 800; }
+#menusale{ color: red; width: 100px}
+#menusale:hover{ color: red;}
+#blackF{ 
+    width: 100px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+#blackF > a{ color: red; font-weight: bolder;}
+#blackF > a:hover{ color: red}
+#style{ font-weight: bold; }
 
 #search{ 
     width: 150px; border-bottom: 1px solid black;
     display: flex; margin-right: 30px;
-    }
+}
 #searchinput{ border: none; width: 120px;}
 #searchimg{ display: block; margin-right: 30px;}
 
 
 /* =================헤더 이미지================= */
 
-#mainimg{ width: 100%; } 
+#maining{ z-index:2;}
+#mainimg > img{ width: 100%;}
 
 /* ==================신상 본문================== */
 
+#main{ margin: 0 auto; width: 1630px;}
+#new{ font-size: 20px; }
+#newcont{ font-size: 12px; color: #c2c2c2;} 
+#new, #newcont{ text-align: center; padding: 20px;}
+
+#maincont{ 
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap;
+}
+#maincont > ul{ 
+    font-size: 12px; 
+    width: 390px; height: 750px;
+}
+#maincont > ul > li{ line-height: 150%;}
+#maincont .newimg > img{ width: 100%;}
+#maincont .colorreview{ 
+    display: flex; justify-content: space-between;
+    margin: 7px 0px;
+}
+#maincont .color{ display: flex;}
+#maincont .color > span{ 
+    display: inline-block;
+    border: 1px solid #dbdbdb; 
+    width: 10px; height: 10px;
+    margin-right: 2px;
+}
+#maincont .review{ color:#888888; }
+#maincont .newsize{ color:#888888}
+#maincont .newbigsize{
+    height: 15px; 
+    font-size: 13px; font-weight: bold ;color: #db1b1b;
+    margin-bottom: 4px; 
+}
+#maincont .newsale{ 
+    display: flex; justify-content: space-between;
+    margin-bottom: -2px;
+}
+#maincont .newsaleprice{ text-decoration: line-through; color:#888888;}
+#maincont .newpercent{ font-size: 15px; font-weight: bold ;color: red;}
+#maincont .newbest{ margin: 8px 0px;}
 
 
-/* ====================푸터==================== */
+/* =====================푸터===================== */
+
+#footer{ background-color: #f7f7f7; width: 100%;}
+
+#fttop{ 
+    width: 1200px; margin: 0 auto; padding: 50px 0px;
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; 
+}
+#fttop > div{  }
+#fttop > div > div{ font-size: 12px; margin: 20px 0px; line-height: 150%;}
+#fttop > div > h3, h4, h5{ margin: 20px 0px;}
+
+#ftbottom{
+    background-color: white;
+    width: 100%; 
+    font-size: 11px; color: #949494;
+    padding: 40px;
+}
+#ftcont{
+    width: 800px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: center;
+}
+#ftcont > div{ padding-right: 3px;}
+#ftcont > div >a{ color: #949494;} 
+
+/* ===================사이드바==================== */
+
+#popup{ 
+    background-color: #fafafa;
+    position: fixed;
+    top: 35%; right: 0px;
+    z-index: 1;
+    width: 50px;
+}
+#popup img{ 
+    width: 35px; padding: 8px; 
+    display: block; margin: 5px auto;
+}
+#popup li{ border: 1px solid #dbdbdb; position: relative;}
+#popup li:hover .popupsub{
+    display: inline; 
+    top: 12px; right: 50px;}
+.popupsub{
+    position: absolute; display: none;
+    font-size: 10px;
+    color: white; background-color: black;
+    border-radius: 5px;
+    text-align: center; 
+    width: 75px; height: 20px;
+    padding-top: 3px;
+}
+#arrow img{ padding: 2px 8px; margin: 1px; width: 45px; height: 30px; }
