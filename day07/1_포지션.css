@@ -1,0 +1,42 @@
+.box{ 
+    width: 100px; height: 100px;
+    border: 1px solid red;
+    background-color: yellow;
+}
+.box2{
+    background-color: red;
+    /* 우선선택자 : #아이디 > .클래스 > *와일드카드 */
+    position: relative; /*상대적인(뜻) : 상대위치 : 본래 지정된 구역의 위치부터 시작 */
+    top : 50px; /* 위쪽 : 기존 위치에서부터 윗변 기준으로 50px 만큼 아래로 이동 */
+    left: 50px; /* 왼쪽 : 기존 위치에서부터 왼쪽변 기준으로 50px 만큼 오른쪽으로 이동 */
+}
+.box3{
+    background-color: green;
+    position: absolute; 
+    /* 절대적인(뜻) : 절대위치 : (* 가장 가까운) 부모 구역의 위치 부터 시작*/
+    top : 50px; /* 부모 위치에서부터 윗변 기준으로 50px 만큼 아래로 이동 */
+    left: 50px; /* 부모 위치에서부터 왼쪽변 기준으로 50px 만큼 오른쪽으로 이동 */
+}
+.box4{
+    background-color: aqua;
+    position: static; 
+    /* 정적인(뜻) : 고정위치(기본값/생략가능) : top, left, right, bottom 속성 사용 불가능 */
+    top : 50px; left: 50px;
+}
+.box5{
+    background-color: gray;
+    position: fixed; 
+    /* 고정인(뜻) : 결정된 위치 : 디바이스(전자기기화면) 의 위치 고정 */
+    bottom : 10px; right: 10px; /* 오른쪽 하단에 고정 */
+}
+.parent{
+    background-color: blue; padding: 10px;
+    position: relative;
+}
+.box6{
+    background-color: beige;
+    position: absolute; 
+    /* absolute 는 가장 가까운 relative 를 가진 조상의 기준점 */
+    top : 50px; right: 50px; 
+}
+
