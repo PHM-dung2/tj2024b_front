@@ -8,8 +8,10 @@
         3. 여러 사람들과 동일한 프로젝트(저장소-리포지토리)를 병령 작업
     5. 대표 용어
         1. Repository : 저장소 / 프로젝트의 파일이나 폴더를 저장하는 저장소
-        2. Commit : 파일을 추가 / 변경 된 내용을 저장소에 저장하는 작업
+        2. Commit : 파일을 추가 / 변경 된 내용을 저장소(현재pc,로컬)에 저장하는 작업
         3. push : 추가 / 변경 된 내용을 원격(GIThub) 저장소에 업로드 작업
+
+    6. 저장소 만드는 사람/계정 , 파일 commit/push 이름/아이디 별도 존재한다.
 
 [ vscode 와 github 연동 ]
     1. github 로 부터 회원가입
@@ -17,4 +19,16 @@
     3. [64-bit Git for Windows Setup.]
     4. [vscode 재실행] 후 왼쪽 메뉴에 [소스 제어]탭 클릭
     5. [Github 게시] -> [로그인] -> 웹페이지[git]로그인 진행 -> [continue]
-    6. Publish to Github public repository [본인아이디]/프로젝트명(최상위폴더명)
+    6. Publish to Github public repository [본인아이디]/프로젝트명(최상위폴더명) --> 선택 클릭 --> [확인]
+
+    ---> * 최초/pc변경시 git 사용시 : git 에서 'user.name' 및 'user.email'를 구성해야 합니다.
+    
+    7. [vscode 상단메뉴] -> [터미널]-> [새터미널] -> [+]옆에 [v] 클릭 -> [git bash]
+    8
+        [ git user.name 확인 ] git config --global user.name
+        [ git user.name 설정 ] git config --global user.name git아이디
+        [ git user.email 확인 ] git config --globla user.email 
+        [ git user.email 확인 ] git config --globla user.email git아이디@이메일포함
+    9. [vscode 왼쪽 메뉴] 에 [소스 제어]탭 클릭-> [메세지 입력칸 = 기록 메세지]
+    10. [ 커밋 및 푸시 ]
+        * 만일 최초/pc변경시 git 사용이면 [ git 로그인 ]창 나오면 브라우저 로그인 처리
