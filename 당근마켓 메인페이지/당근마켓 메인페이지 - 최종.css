@@ -61,7 +61,6 @@ li{ list-style-type: none; }
 /*header2*/
 #header2{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin: 0px auto;
 }
@@ -70,7 +69,7 @@ li{ list-style-type: none; }
     justify-content: center;
     align-items: center;
     padding-bottom: 40px;
-    width: 130px;
+    width: 150px;
     
 }
 
@@ -78,12 +77,12 @@ li{ list-style-type: none; }
     display: flex;
     border: #eeeeee 1px solid;
     border-radius: 100px;
-    width: 200px;
+    width: 150px;
     height: 40px;
     font-weight: bold;
     font-size: 16px;
     font-family: 'Pretendard-Regular';
-    padding
+    padding: 7px 10px 10px 10px;
 }
 #header2right{ /*검색창 보더*/
     border:1.5px solid #c7c7c7;
@@ -163,13 +162,14 @@ li{ list-style-type: none; }
 #Main {
     margin: 0 auto;
     width: 1144px;
-    padding: 0px 128px;
+    
 
 }
 
 #Popular-Category>h2 {
     font-size: 24px;
     font-weight: bold;
+    padding: 40px 0px;
 }
 
 #Item {

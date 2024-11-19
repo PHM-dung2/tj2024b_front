@@ -1,0 +1,42 @@
+
+.parent{
+    background-color: aqua;
+    width: 700px; height: 500px;
+    margin: 0 auto;
+    /* 하위 요소의 absolute 기준점 */
+    position: relative;
+}
+.box{
+    width: 100px; height: 70px;
+    background-color: yellow;
+    border-radius: 10px;
+    text-align: center;
+     /* 컨첸츠/내용물 가로/세로 가운데 정렬 */
+    display: flex; align-items: center; justify-content: center; 
+    /* 포지션 */
+    position: absolute;
+}
+.box1{
+    top: 50px;
+    left: 300px;
+}
+.box2{
+    top: 120px;
+    left: 150px;
+}
+.box3{
+    top: 120px;
+    left: 450px;
+}
+.box4{
+    top: 260px;
+    left: 150px;
+}
+.box5{
+    top: 260px;
+    left: 450px;
+}
+.box6{
+    top: 330px;
+    left: 300px;
+}
