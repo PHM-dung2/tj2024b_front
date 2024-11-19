@@ -1,0 +1,21 @@
+
+#popup{
+    background-color: beige;
+    width: 200px; height: 200px;
+    border-radius: 10px; padding: 5px;
+    position: fixed;    /* 디바이스 화면 위치 고정 */
+    bottom: 50px; right: 10px;
+    z-index: 2;
+    /* z-index : 만일 요소들간의 position 으로 겹쳤을때 우선순위 정하기 */
+    /* z-index의 값이 높을수록 겹쳤을때 위에 표시된다. */
+}
+#header{
+    display: flex; /* 하위 요소들 배치 방법 */
+    justify-content: space-between; /* flex 요소 양족 균등 가로 정렬 */
+    background-color: aqua;
+    position: sticky;   
+    /* sticky : 달라붙다(뜻) : 지정한 구역이 스크롤 밖으로 나갔을 때 위치 고정 */
+    top : 0px;  /* 고정할 위치 */
+    z-index: 3;
+}
+#header > ul{ display: flex; }
