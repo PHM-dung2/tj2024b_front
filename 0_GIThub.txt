@@ -27,8 +27,8 @@
     8
         [ git user.name 확인 ] git config --global user.name
         [ git user.name 설정 ] git config --global user.name git아이디
-        [ git user.email 확인 ] git config --globla user.email 
-        [ git user.email 확인 ] git config --globla user.email git아이디@이메일포함
+        [ git user.email 확인 ] git config --global user.email 
+        [ git user.email 확인 ] git config --global user.email git아이디@이메일포함
     9. [vscode 왼쪽 메뉴] 에 [소스 제어]탭 클릭-> [메세지 입력칸 = 기록 메세지]
     10. [ 커밋 및 푸시 ]
         * 만일 최초/pc변경시 git 사용이면 [ git 로그인 ]창 나오면 브라우저 로그인 처리
