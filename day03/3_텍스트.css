@@ -1,0 +1,67 @@
+/*
+    CSS 주석
+*/
+/*
+
+    - CSS 기본구조
+        선택자{ 속성명 : 속성값; }
+        어디에{ 무엇을 : 어떻게; }
+*/
+
+/*
+    웹폰트 vs 일반폰트
+    무료 폰트 모음 : https://noonnu.cc/index
+    맑은 고딕이 눈 피로도가 덜함
+*/
+
+@font-face {
+    font-family: 'HakgyoansimDunggeunmisoTTF-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 'title' 이라는 이름을 가진 클래스 마크업 꾸미기 */
+.title{
+    font-family: "궁서","굴림" ; /* 따옴표 종류 상관없음 */ 
+    /*글꼴:사용자pc에 설치된 글꼴만 가능 */
+    /*웹폰트(눈누vs구글) : 폰트제공하는 서버로부터 글꼴 사용*/
+    font-size : 50px ; /* 글꼴 크기 , px(픽셀) */
+    font-style: italic; /* 글꼴 기울기 */
+    font-weight: bold; /* 글꼴 진하게, h3 마크업은 기본적으로 진하게 포함 */
+}
+
+.content{
+    font-family: 'HakgyoansimDunggeunmisoTTF-B' , '맑은 고딕';
+    color : gold;         /* 글꼴 색상 */
+    word-spacing: 10px ;    /* 단어 간격 : 어간 */
+    letter-spacing: 5px ;   /* 글자 간격 : 자간 */
+    line-height: 160% ;          /* 줄간격 , %단위(보통 <160>~180) */
+}
+
+.writer{
+    text-align: center ;        /* 텍스트/컨텐츠 가로 정렬 , left , right , center */
+    text-decoration: underline overline line-through; /*텍스트 선긋기 : 밑줄, 
+                                                overline(윗줄) , line-through(취소선)
+                                                3개 동시 사용 가능 */
+    text-shadow: 1px 1px 3px gray;    /* 텍스트 그림자 : x축 y축 흐림정도 색상 */
+    color: red;                       /* 색상 : 1.색상명 2.RGB색상[0~255] 3.헥스코드[16진수] https://color.adobe.com/ko/ */ 
+    color: #ff0000;                   /* 헥스코드 추천 */      
+    color: rgb(255,0,0)
+}
+
+/*
+    x축 : 가로축, y축 : 세로축
+
+    -------중심점------->
+    -x                +x
+    
+    |     -y
+    |
+    |
+    중심점
+    |
+    |
+    v     +y
+
+*/

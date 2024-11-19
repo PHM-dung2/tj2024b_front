@@ -1,0 +1,147 @@
+[CSS]
+    - C(Cascading) S(Style) S(Sheets)
+    1. 위에서 아래로 꾸미기 시트를 덮는다.
+    2. 주로 HTML언어를 꾸미는 목적으로 사용
+    3. CSS는 (HTML)종속형 스타일 프로그래밍 언어 , 즉 HTML안에서 같이 실행되는 언어
+    4. CSS 적용방법
+        1. 마크업에 style 속성 사용한다. (식별 x) <-- 비권장 -->
+            <마크업 style="속성명 : 속성값; ">
+        2. <head> 마크업에 <style> 마크업 안에 css 작성 한다. (식별 o)
+            <head>
+                <style>
+                    식별자{ 속성명 : 속성값; }
+                </style>
+            <head>
+        3. <head> 마크업에 <link> 마크업 이용한 css 파일 포함하기 ( 식별 o ) <-- 권장(유지보수 장점) -->
+            1. CSS 파일 만들기 , 확장자 css
+            2. css 파일 내 css 코드 작성하기
+                식별자{ 속성명 : 속성값; }
+            3. 적용할 html 파일 내 css파일 포함하기 
+                <head>
+                    <link href="호출할css파일경로" rel="stylesheet" />
+                </head>
+    5. 
+        누구를( 무엇을 : 어떻게 )
+
+[CSS선택자]
+    1. 종류
+        1. 전체 선택자      ,   *   ,      ,*{속성명:값;}
+        2. 마크업 선택자    ,   마크업명    , h1{속성명:값;}
+        3. 클래스 선택자    ,   .클래스명   , .box{속성명:값;}
+        4. 아이디 선택자    ,   #아이디명   , #cont{속성명:값;}
+            - 클래스와 아이디는 개발자가 마크업에서 임의로 이름을 정의한다.
+            <마크업명 class="box">
+            <마크업명 id="cont">
+    
+    2. 속성명이 중복일때 적용 우선순위
+        - #아이디 > .클래스 > 마크업 > *
+        - 선택자가 동일한 경우는 작성순으로 아래에 있는 속성명이 최종 적용된다.
+
+    3. 여러개 선택지를 한번에 꾸미기
+        - ,(쉼표) 이용한 여러개 선택자 작성
+        - 선택자1 , 선택자2 , 선택자3( 속성명 : 값; )
+
+    4. 특정 선택자의 하위 선택자를 선택할 때
+        - >(꺾은괄호) 이용한 접근/선택
+        - 상위선택자 > 하위선택자 { 속성명 : 값;}
+    
+    5. 특정 선택자의 모든 하위 선택자를 선택할 때
+        - (띄어쓰기) 이용한 접근/선택
+        - 상위선택자 하위선택자{ 속성명 : 값; }
+
+[CSS 텍스트 속성 종류]
+    1. font-familly : "폰트명"             , 글꼴명
+    2. font-size : 크기px                  , 글꼴크기
+    3. font-style : italic;                , 글꼴 기울기
+    4. font-weight: bold;                  , 글꼴 진하게 , 100~900
+    5. color : 글꼴 색상                    , 그롤 색상
+    6. word-spacing : 크기px                , 어간
+    7. letter-spacing : 크기px              , 자간
+    8. line-height : 배율%                  , 줄간격 , 기본값:150%
+    9. text-align : left, light, center     , 텍스트 가로 정렬
+    10. text-decoration : 줄종류             , underline(밑줄) overline(윗줄) line-through(취소선)
+    11. text-shadow : x축 y축 흐름정도 색상   , 글꼴 그림자
+
+[ 색상 ]
+    방법1 : 색상명   , red
+    방법2 : 헥스코드 , #ff0000              * 권장 : 널리 사용됨
+    방법3 : RGB코드  , rgb(255,0,0)
+
+[ 웹 폰트 ]
+    방법1 : 구글 폰트
+    방법2 : 눈누 홈페이지(다양한 무료 폰트 모임) , https://noonnu.cc/index
+
+[ 구역/상자 , 컨텐츠/내욤물 ]
+    - 모든 마크업들은 하나의 구역/박스를 갖는다.     <p> </p> , <h1> </h1>
+    - 컨텐츠 : 박스 안에 포함된 내용물              <p> 컨텐츠 </p>
+
+[CSS 박스/구역 속성 종류]
+    1. border : 선종류 선굵기 선색상 ;
+        - 선종류 : solid(실선) dotted(점선) dashed(파선) double(이중선) 
+        - border-top , border-right , border-botton , border-left
+
+    2. border-radius : 둥근정도xp;                  , 둥근 모서리
+    3. box-shadow : x축 y축 흐림정도 색상;           , 구역 그림자
+    4. width : 가로사이즈px;                        , 가로사이즈, 기본값 100%
+    5. height : 세로사이즈px;                       , 세로사이즈 , 기본값 100%
+    6. * padding : 안쪽여백px;                      , 테두리와 근접한 구역 사이 여백
+    7. * margin : 바깥여백px;                       , 내용물과 테두리 사이 여백
+        - padding-top , padding-right , padding-botton , padding-left
+        - margin-top , margin-right , margin-bottom , margin-left
+        - margin/padding : 위 오른쪽 아래 왼쪽
+        - margin/padding : 위/아래 왼/오
+        - margin/padding : 위/오른쪽/아래/왼쪽
+        - margin : 0 auto   , ** 구역 가로 가운데 정렬 **
+    8. background-color : 색상                      , 구역 배경색
+
+[ display 속성 ]
+    - 마크업들을 배치 하는 방법 정의하는 속성
+    - 종류
+        1. block : 
+            - 해당 마크업이 한줄을 차지하는 배치
+            - (width , height) 적용 가능
+            - margin/paddind 속성은 모든 여백 적용
+            대표 마크업 : <div> , <h> , <p> , <ul> , <li> 등등
+
+        2. inline : 
+            - 해당 마크업이 한줄에 포함되는 배치 방법
+            - (width , height) 적용 불가능
+            - margin/paddind 속성은 좌우 여백만 적용
+            대표 마크업 : <span> , <a> 등등
+
+        3. inline-block :
+            - 해당 마크업이 한줄에 포함되는 배치 방법
+            - (width , height) 적용 가능
+            - margin/paddind 속성은 모든 여백 적용
+            대표 마크업 : <input /> , <button> 등등 , 
+
+        4. none :
+            - 숨기기/표시안함
+
+[ display : flex ]
+    - display 속성 중에 제공 하는 속성값
+    - 내가 정렬하고 싶은 요소들의 상위요소에 적용하는 속성
+    - 크롬의 개발자도구(f12)에서 flex마법사 지원
+    - 관련 속성
+        1. flex-wrap
+            1. nowrap(기본값)   : 자식 요소들의 크기가 더 크면 자동 크기 맞춤
+            2. wrap             : 자식 요소들의 크기가 더 크면 자동으로 줄바꿈 
+        2. flex-direction
+            1. row(기본값)      : 자식 요소들의 가로 방향 배치
+            2. cloumn           : 자식 요소들의 세로 방향 배치
+        3. justify-content
+            1. flex-start       : 자식 요소들의 가로 왼쪽 정렬
+            2. flex-end         : 자식 요소들의 가로 오른쪽 정렬
+            3. center           : 자식 요소들의 가로 가운데 정렬
+            4. space-between    : 자식 요소들의 양쪽 끝에 여백 없이 사이 여백 균등 정렬
+            5. space-around     : 자식 요소들의 양쪽 끝에 사이여백50% 하고 사이 여백 균등 정렬
+            6. space-evenly     : 자식 요소들의 양쪽 끝여백과 사이여백을 균등 정렬
+        4. align-items
+            1. stretch(기본값)  : 자식 요소들의 세로크기가 고정이 아닐때 자동으로 부모 크기만큼 늘어남
+            2. center           : 자식 요소들의 세로 가운데 정렬
+            3. flex-end         : 자식 요소들의 세로 밑변 정렬
+            4. flex-start       : 자식 요소들의 세로 윗변 정렬
+
+[ 레이아웃 ]
+    - 구성 요소들을 효과적으로 배열 하는 작업
+    - 

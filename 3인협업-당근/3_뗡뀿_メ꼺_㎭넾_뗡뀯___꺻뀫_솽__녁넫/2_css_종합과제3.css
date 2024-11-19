@@ -1,0 +1,105 @@
+body {
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, Pretendard Variable, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
+}
+
+#Main {
+    margin: 0 auto;
+    width: 1144px;
+    padding: 0px 128px;
+
+}
+
+#Popular-Category>h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#Item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 128px;
+}
+
+.Item-box {
+    background-color: #F2F3F6;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Item-img {
+    width: 81.6px;
+    height: 81.6px;
+}
+
+.Item-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Item-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Main-bottom {
+    background-color: #FFF8F5;
+    margin: 104px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#Main-bottom-in {
+    width: 1144px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#App-download {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#App-text-1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6f0f;
+    margin: 0 auto;
+}
+
+#App-text-2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Store {
+    height: 40px;
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+}
+
+#Phone {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.phone-image-1 {
+    border: 3px solid #ffad80;
+    border-radius: 5%;
+    height: 365.5px;
+    margin-right: 40px;
+}
+
+.phone-image-2 {
+    border: 3px solid #ffad80;
+    border-radius: 5%;
+    height: 365.5px;
+}

@@ -1,0 +1,20 @@
+[ GIThub ]
+    1. https://github.com
+    2. 버전관리 서비스 ( VCS )
+    3. 소스코드를 GIThub 서버에 저장하고 다른 사람과 동시에 병렬 관리가 가능하다.
+    4. 특징
+        1. 소프트웨어 개발에서 소스코드를 효과적으로 관리 , 무료
+        2. 개발 프로젝트내 폴더 작업을 기록하고 버전(과거) 관리 , 추적
+        3. 여러 사람들과 동일한 프로젝트(저장소-리포지토리)를 병령 작업
+    5. 대표 용어
+        1. Repository : 저장소 / 프로젝트의 파일이나 폴더를 저장하는 저장소
+        2. Commit : 파일을 추가 / 변경 된 내용을 저장소에 저장하는 작업
+        3. push : 추가 / 변경 된 내용을 원격(GIThub) 저장소에 업로드 작업
+
+[ vscode 와 github 연동 ]
+    1. github 로 부터 회원가입
+    2. git 설치 : https://git-scm.com/downloads/win
+    3. [64-bit Git for Windows Setup.]
+    4. [vscode 재실행] 후 왼쪽 메뉴에 [소스 제어]탭 클릭
+    5. [Github 게시] -> [로그인] -> 웹페이지[git]로그인 진행 -> [continue]
+    6. Publish to Github public repository [본인아이디]/프로젝트명(최상위폴더명)

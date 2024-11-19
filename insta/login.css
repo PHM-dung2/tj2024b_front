@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.both{
+    clear: both;
+}
+.wrap{
+    width: 1250px;
+    margin-top: 50px;
+}
+.wrap>div{
+    float: left;
+}
+.imgBox{
+    width: 600px;
+    height: 700px;
+}
+.imgBox_inner{
+    width: 600px;
+    height: 700px;
+
+}
+.imgBox_inner > img{
+    width: 100%;
+    height: 100%;
+}
+.rightContainer{
+    margin-left: 20px
+}
+.logInBox{
+    width: 600px;
+    height: 500px;
+    box-shadow: 0 0 0 1px #ccc inset;
+}
+/* ------------------------------ */
+.logo > div{
+    width: 300px;
+    height: 150px;
+    /* margin: 15px; */
+}
+.logo > div > img{
+    width: 80%;
+    height: 50%;
+    transform: translate(0,40%);
+}
+/* -------------------------------- */
+
+.formBox > form > label{
+    display: block;
+    margin: 5px;
+}
+.formBox > form input{
+    width: 500px;
+    height: 50px;
+    text-align: left;
+}
+.formBox > form > button{
+    width: 500px;
+    height: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(76, 181,249);
+    border: 0;
+    border-radius: 10px;
+}
+/* -------------------------------- */
+.hor{
+    width: 500px;
+    margin-top: 15px;
+}
+.line {
+	display:flex;
+	flex-basis:100%;
+	align-items:center;
+	color:rgba(0,0,0,0.35);
+	font-size:14px;
+	margin:8px 0px;
+}
+.line::before{
+	content:"";
+	flex-grow:1;
+	margin:0px 16px;
+	background:rgba(0,0,0,0.35);
+	height:1px;
+	font-size:0px;
+	line-height: 0px;
+}
+.line::after {
+	content:"";
+	flex-grow:1;
+	margin:0px 16px;
+	background:rgba(0,0,0,0.35);
+	height:1px;
+	font-size:0px;
+	line-height: 0px;
+}
+/* --------------------------- */
+.remember{
+    width: 500px;
+    margin-top: 15px;
+    /* background-color: red; */
+}
+.remember img{
+    width: 20px;
+    height: 20px;
+}
+.remember > div{
+    width: 300px;
+    /* background-color: gray; */
+    font-size: 20px;
+    margin-top : 15px;
+    font-weight: bold;
+}
+.remember > div:nth-child(1){
+    color: rgba(51,144,203,1)
+}
+/* ------------------------- */
+.registerBox{
+    margin-top: 15px;
+}
+.registerBox > div{
+    width: 600px;
+    line-height: 70px;
+    height: 70px;
+    font-size: 20px;
+    box-shadow: 0 0 0 1px #ccc inset;
+}
+.registerLink{
+    color: rgba(51,144,203,1);
+    font-weight: bold;
+}
+/* --------------------------- */
+.appBox{
+    width: 600px;
+}
+.appBox >div {
+    margin-top: 15px;
+}
+.appBox > div:nth-child(1){
+    font-size: 20px;
+}
+.appImgBox > div{
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+}
+.appImgBox img{
+    width: 100%;
+    height: 100%;
+}
+/* ------------------------------ */
+.footer{
+    width: 1300px;
+    margin-top: 200px;
+    height: 80px;
+}
+.footer > div{
+    display: inline-block;
+    margin: 10px;
+    width: max-content;
+    white-space: nowrap;
+}

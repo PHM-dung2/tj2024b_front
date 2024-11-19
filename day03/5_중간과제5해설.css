@@ -1,0 +1,34 @@
+
+*{  /* 전체 선택자 = 모든 구역 공통 부문 */
+    font-family: "맑은 고딕";
+    font-size: 15px;
+}
+
+/* 1. 이미지 사이즈 */
+.top{ text-align: left;}
+/* 2. 이미지 가로 사이즈 */
+.top > img{ width: 300px;}
+/* 3. 구역간 바깥여백 */
+.bottom{ margin: 10px 0px;}
+/* 4. 제목 */
+.bottom > .title{   /* 다른 구역의 'title'과 구분하기 위해서 */
+    font-weight: bold;
+}
+.bottom > .title{
+    font-weight: bold;
+}
+
+/* 내용 구역 */
+.content{
+    background-color: #0f6878; /* 배경색 */
+    color: white;   /* 글꼴 색상 */
+    padding: 10px 20px; /* 안쪽 여백 */
+    line-height: 160%;  /* 줄간격 */
+    width: 500px;
+}
+.point1 , .point2{
+    color: orange;  
+}
+.point1{
+    font-size: 25px;
+}

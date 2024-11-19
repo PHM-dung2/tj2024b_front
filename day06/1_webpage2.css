@@ -1,0 +1,109 @@
+*{  
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+a{ color: black; text-decoration: none;}
+li{ list-style-type: none;}
+
+/* ============================================== */
+#header{ 
+    display: flex; justify-content: space-between;
+    width: 1280px; margin: 0 auto; padding: 15px;
+}
+#headlist1{ 
+    display: flex;
+    justify-content: flex-end;
+}
+#headlist2{ 
+    font-size: 25px; font-weight: bold;
+    display: flex; margin: 10px 0px;
+    justify-content: flex-end;
+}
+#headlist2 > li{margin-left: 80px;}
+
+/* ============================================== */
+#mainimg{ text-align: center;}
+
+/* ============================================== */
+#main{ 
+    display: flex; justify-content: space-between; 
+    width: 1280px; margin: 0 auto; margin-top: 30px; margin-bottom: 30px;
+}
+#mainmenu{ width: 250px;}
+#menubox1{ border-bottom: 2px solid black;}
+#submenu1{ 
+    font-weight: bold; font-size: 20px; color:white; 
+    background-color: #0ca9a2;
+    padding: 12px;
+}
+#submenu2{ margin: 13px;}
+#submenu3{ margin: 9px;  padding: 5px; border-radius: 10px; width: 150px; height: 30px;}
+#submenu4{ margin: 9px; width: 50px; height: 30px;}
+
+#menubox2{ border-bottom: 2px solid black;}
+#menubox2 > div{ 
+    font-size: 20px; font-weight: bold; font-family: "굴림";
+    padding: 12px;
+    border-bottom: 2px solid #eeeeee;
+}
+#menubox2 > ul > li{ margin: 10px;}
+
+#menubox3 > div{ 
+    font-size: 20px; font-weight: bold; font-family: "굴림";
+    padding: 12px;
+    border-bottom: 2px solid #eeeeee;
+}
+#menubox3 > ul > li{ margin: 10px;}
+
+#content{ width: 500px;}
+#leftcont { margin-bottom: 50px;}
+#leftcont > ul{ margin-top: 10px; margin-bottom: 50px}
+
+#leftcont > p { 
+    font-size: 20px; font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px
+}
+#leftcont > ul > li{
+    line-height: 200%;
+    display: flex; justify-content: space-between;
+}
+
+#rightcont > p { 
+    font-size: 20px; font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px
+}
+
+#subbox1 > div > p{ 
+    font-size: 15px; font-weight: lighter; 
+    line-height: 100%;
+}
+#subbox2 > div > p{ 
+    font-size: 15px; font-weight: lighter; 
+    line-height: 100%;
+}
+#subbox1, #subbox2{
+    display: flex;
+    margin: 20px;
+}
+#subbox1 > div{ margin: 0px 40px 20px 0px;}
+#subbox2 > div{ margin: 0px 40px 20px 0px;}
+    
+#maincontent2{ width: 500px;}
+
+
+/* ============================================== */
+#footer{ background-color: #05344e; color: white; width: 100%;}
+#ftbase{ width: 1280px; margin:0 auto; padding: 10px 0px;}
+#ftbox1{ padding : 15px 0px;}
+#ftbox1 > ul { display: flex;}
+#ftbox1 > ul > li{ margin-right: 50px;}
+#ftbox1 > ul > li > a{ color: white; }
+
+#ftbox2{
+    display: flex; justify-content:space-between;
+    margin: 20px 0px;
+}
+#ftbox2 > ul > li > h3{ padding-bottom: 5px;}
+#ftbox2 > ul > li { margin: 5px 0px;}

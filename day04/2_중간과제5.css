@@ -1,0 +1,18 @@
+
+.top, .bottom{
+    border: 1px solid gainsboro;
+    width: 500px;
+    padding: 0px 10px;
+}
+.content, .content1, .content2{ line-height: 300%;}
+
+.content1{ line-height: 130%; }
+
+.title, .content{
+    font-weight: bold;
+}
+
+.span1{
+    font-weight: bold;
+    color: orange;
+}

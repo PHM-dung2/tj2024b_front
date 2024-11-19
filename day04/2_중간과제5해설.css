@@ -1,0 +1,43 @@
+*{/* 전체 선택자 */
+    /* 기본 여백값 모두 제거 */
+    padding: 0ps; margin: 0px;
+}
+
+/* 1. 하나의 제품 구약 */
+.product{
+    border: 1px solid #eeeeee; /* 테두리 , 자주 쓰는 헥스코드 외우면 좋음(밝은 회색 : #eeeeee , #e8e8e8) */
+    width: 400px;  /* 구역 가로 사이즈 */
+    margin: 20px; /* 바깥여백 : 20 */
+}
+
+/* 2. 제품 이미지 */
+.product > .top > .pimg{
+    width:400px;
+}
+
+/* 3. 제품 하단 */
+.bottom{
+    border-top: 1px solid #eeeeee;
+    padding : 20px 10px 10px 10px;  /* 안쪽 여백 */
+}
+
+/* 4. 제품 하단 정보들 */
+.bottom > .name{
+    font-size: 25px;
+    font-weight: bold;  /* 진하게 */
+}
+.bottom > .price{
+    font-weight: bold;
+    margin-top: 20px;
+}
+.bottom > .content{
+    margin-top: 20px;
+    line-height: 160%;
+}
+.bottom > .review{
+    margin-top: 20px;
+}
+.bottom > .review > .orange{
+    color: orange;
+    font-weight: bold;
+}

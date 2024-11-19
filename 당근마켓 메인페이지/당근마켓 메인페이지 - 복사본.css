@@ -1,0 +1,189 @@
+*{  
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+a{ color: black; text-decoration: none;}
+li{ list-style-type: none; }
+
+/* ==============헤더(류예나)================= */
+
+/*웹폰트 사용*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#header{
+    width: 1144px;
+    margin: 0px auto;
+    padding-top: 15px;
+}
+/*header1*/
+#header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    font-family: 'Pretendard-Regular';
+    
+    width: 1144px;  
+    padding-bottom: 20px;
+}
+
+#h1list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 55px;
+}
+#h1list>li>a{
+    padding-left: 20px;
+    font-size: 17px;
+}
+#btn1 {
+    background-color: #ffebdd;
+    color: #ff6f0f;
+    border:none;
+    width: 90px;
+    height: 35px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Pretendard-Regular';  
+}
+/*header2*/
+#header2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+#header2left{
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    width: 130px;
+    
+}
+
+#btn2{/*부천시 소사구 버튼*/
+    display: flex;
+    border: #eeeeee 1px solid;
+    border-radius: 100px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Pretendard-Regular';
+    align-content: center;
+}
+#header2right{ /*검색창 보더*/
+    border:1.5px solid #c7c7c7;
+    width: 1000px;
+    border-radius: 6px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headerlist{ /*검색창 셀렉박스 문자*/
+    border: none;
+    background-color: none;
+    font-size: 12px;
+    font-family: 'Pretendard-Regular';
+    width: 850px; 
+    display: flex;
+    text-align: center;
+    margin-top: 3px;
+    padding-left: 20px;
+    padding: 10px;
+    font-weight: bold;  
+    color:#646363;  
+}
+#bar{ /*검색창 안 바*/
+    color: #eeeeee; margin-right: 5px;
+}
+#bot1{ font-size: 13px; margin-right: 5px;}
+#bot2{/*검색창 셀렉박스 화살표*/
+    padding-top: 5px;
+    font-size: 6px;
+    font-family: 'Pretendard-Regular';
+    border-right: 1px solid #afaeae;
+    padding-right: 10px;
+    height: 20px;
+}
+#textbox{ /*검색창 안 텍스트박스*/
+    border: none; font-size: 16px;
+}
+#btn4{/*돋보기 버튼*/
+    border: none;
+    background-color: white;
+}
+
+#h3list{ /*인기검색어 전체 박스*/
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding: 10px 0px;
+}
+
+#h3list > p{ font-size: 10px;}
+
+#header2right2 > h4{
+    display: inline-block;
+}
+
+/*인기 검색어 리스트*/
+#h3list > p{ font-size: 13px; padding-left: 17px}
+
+#h3list>li>a{
+    padding-left: 10px;
+    font-size: 13px;
+    color: grey
+}
+
+/*main img*/
+#main_img{
+    width: 100%;
+}
+
+/* ================푸터(희만)================= */
+#footer{ font-family: 'Pretendard-Regular';}
+#fttop, #ftbottom, #ftlicense{
+    width: 1144px; margin: 0 auto; 
+}
+
+/* ===================로고==================== */
+#ftlogo > img{ padding-bottom: 25px;}
+#ftlogo1{ width: 50px; height: 55px;}
+#ftlogo2{ width: 110px; height: 50px;}
+
+/* ===================링크==================== */
+#fttop{ 
+    display: flex; justify-content: space-between; 
+    border-bottom: 1px solid #f5f5f5;
+    padding: 50px 0px;
+}
+#ftside{ width: 600px; flex-wrap: wrap; display: flex; justify-content: flex-start;}
+#ftside > div{ width: 150px;}
+#ftside > div > ul > li > a{ color:#363636; line-height: 220%; font-size: 14px;}
+#ftside > div > ul > li > h4{ margin-bottom: 10px;}
+
+/* ===================하단===================== */
+#ftbottom{ font-size: 14px; color:#8a8a8a; padding-top: 40px;}
+#ftbottom > ul > li{ display: flex; line-height: 155%;}
+#ftbottom > ul > li > h4{ color: #888888; margin-right: 10px;}
+#ftbottom > ul > li > span{ margin: 0px 10px;}
+
+/* ==================이용약관=================== */
+#ftlicense{ padding-top: 30px; margin-bottom: 30px;}
+#ftlicense > ul{ display: flex; }
+#ftlicense > ul > li{ margin-right: 20px;}
+#ftlicense > ul > li > a{ font-size: 14px; color:#8a8a8a;}

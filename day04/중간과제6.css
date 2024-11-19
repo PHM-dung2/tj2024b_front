@@ -1,0 +1,39 @@
+*{ padding: 0px; margin: 0px;}
+
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+body{
+    background-color: pink;
+    text-align: center;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 50px;
+    width: 300px;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+img{
+    border-radius: 140px;
+    margin: 15px;
+}
+
+.linkbox > .box{
+    background-color: skyblue;
+    padding: 20px;
+    margin: 15px auto;
+    width: 280px;
+    border-radius: 10px;
+}
+
+a{
+    color:white;
+    font-weight: bold;
+}

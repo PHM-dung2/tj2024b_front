@@ -1,0 +1,140 @@
+/* 작업 확인용 */
+/* * { border: 1px solid red; } */
+
+/* 공통 속성 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{ list-style-type: none;}
+
+body{ font-family: "맑은 고딕";}
+
+#wrap {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+#header {
+    width: 1600px;    
+}
+
+/* 헤더 윗부분 */
+#header_icons {
+    display: flex;
+    justify-content: flex-end;    
+}
+
+/* 헤더 아래부분 */
+#navi {
+    padding: 30px;
+}
+
+/* 헤더 로고 제목 */
+#header_site_name {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* 헤더 쇼핑 목록 */
+#navi {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 메인 이미지 */
+#main_image {
+    width: 1600px;
+}
+
+/* 헤더 상위 아이콘 */
+#header_icons>.icon {
+    width: 25px;    
+    margin: 10px;
+}
+
+#header_site_name>h3 {
+    font-size: 40px;
+}
+
+/* 푸터 */
+#footer {
+    width: 100%;
+    background-color: #eee;    
+}
+#footer_wrap {
+    width: 1600px;    
+    display: flex;
+    justify-content: space-between;    
+    padding: 40px 30px;
+    margin: 0 auto;
+}
+
+#name{ 
+    margin-bottom: 30px;
+    width: 130px;
+}
+
+#company_data {
+    font-size: 13px;
+}
+
+.small_char {
+    font-size: 13px;
+}
+
+#company_afterservice {
+    display: flex;
+}
+
+#cs_center {
+    margin-right: 50px;
+}
+
+
+/* 희만 css */
+#maintitle{
+    text-align: center;
+    margin: 50px;
+}
+#titletop{ 
+    font-size: 28px; font-family: "Cormorant Garamond" ; margin: 8px;
+}
+#titlebottom{ color: #696969; letter-spacing: -2px;}
+
+/* ====================================== */
+#img1{ display: flex; justify-content: space-between;}
+#img1 > img{ width: 390px; height: 500px;}
+
+#content1{ display: flex; justify-content: space-between;}
+#content1 > div{width: 390px; height: 250px;}
+#contentname{ margin:20px 0px; font-weight: bolder; font-size: 15px;}
+#subct1{ font-size: 13px; margin:10px 0px;}
+#subct1 > p{ color: #a9aaa9; }
+#subct1 > ul{ color: #c7c8c7;}
+#subct1 > div{ color: #8c8c8c; font-size: 15px;}
+#sale1{ 
+    font-size: 14px; color:#a9aaa9;
+    text-decoration: line-through;
+}
+#price1{
+    font-size: 18px;
+    display: flex;
+}
+#price1 > span{ margin-right: 8px;}
+
+#img2{ display: flex; justify-content: space-between;}
+#img2 > img{ width: 385px; height: 500px;}
+
+/* ====================================== */
+#contentname > p{ margin:2px 0px; color: #a9aaa9; font-size: 13px;}

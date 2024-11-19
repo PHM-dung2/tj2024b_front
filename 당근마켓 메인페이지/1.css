@@ -1,0 +1,11 @@
+#Main-bottom{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+#App-download{
+    width: 1280px;
+}
+#App-donwload > div{ margin: 0 auto;}
+#App-donwload > div > p > img{ margin: 0 auto;}
