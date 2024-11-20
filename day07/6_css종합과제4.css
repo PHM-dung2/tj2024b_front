@@ -97,7 +97,7 @@ body{ font-family: "Noto Sans KR"; sans-serif;}
 
 /* =================헤더 이미지================= */
 
-#maining{ z-index:2;}
+#mainimg{ position:relative; z-index:2;}
 #mainimg > img{ width: 100%;}
 
 /* ==================신상 본문================== */
@@ -176,7 +176,7 @@ body{ font-family: "Noto Sans KR"; sans-serif;}
     background-color: #fafafa;
     position: fixed;
     top: 35%; right: 0px;
-    z-index: 1;
+    z-index: 1; 
     width: 50px;
 }
 #popup img{ 
@@ -197,3 +197,15 @@ body{ font-family: "Noto Sans KR"; sans-serif;}
     padding-top: 3px;
 }
 #arrow img{ padding: 2px 8px; margin: 1px; width: 45px; height: 30px; }
+
+/* 1. z-index는 position 속성이 relative 일때, absolute일때 동작합니다
+
+    2. 기본 값은 auto 입니다 음수, 양수 숫자 사용이 가능합니다
+    
+    3. z-index의 값의 숫자가 높으면 높을수록 최상단에 배치되며 낮으면 낮을수록 멀리 배치됩니다
+    
+    4. z-index는 동일 선상에 있는 태그값을 확인하게 되지만 부모 태그의  z-index를 우선시하기 때문에 자식태그의 z-index값이 높더라도
+    
+       부모태그 값을 더 우선시 하게 됩니다.
+    
+    6. 순서 값이 없을 경우 코드 순서에 따라 쌓이게 됩니다*/
