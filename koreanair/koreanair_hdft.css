@@ -17,3 +17,17 @@ a{ color: black; text-decoration: none;}
 li{ list-style-type: none;}
 
 body{ font-family: "Noto Sans KR"; }
+
+/* ================헤더================== */
+#header{ width: 1420px; margin: 0 auto; padding: 10px 0px;}
+#headertop{ 
+  font-size: 14px; font-weight: bold;
+  width: 100%;
+  display: flex; justify-content: flex-end; 
+}
+#headertop ul{ display: flex;}
+#headertop li{ display: flex; justify-content: space-between; }
+#headertop img{ 
+  width: 25px; height: 25px; 
+  display: block; margin: 0 auto;
+} 
