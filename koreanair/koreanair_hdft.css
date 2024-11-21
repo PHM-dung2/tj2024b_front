@@ -11,16 +11,41 @@ li{ list-style-type: none;}
 body{ font-family: "Noto Sans KR";}
 
 /* ================헤더================== */
-#header{ width: 1420px; margin: 0 auto;}
-#headertop{ 
-  font-size: 14px; font-weight: bold;
+
+#header{ width: 1460px; margin: 0 auto;}
+
+/* ==============헤더(위)================= */
+
+#headerTop{ 
+  font-size: 14px;
   width: 100%;
   display: flex; justify-content: flex-end; 
 }
-#headertop ul{ display: flex;}
-#headertop li{ display: flex; justify-content: space-between; padding-left: 10px;}
-#headertop a{ display: flex; align-items: center;}
-#headertop img{ 
+#headerTop ul{ display: flex;}
+#headerTop li{ display: flex; justify-content: space-between; padding-left: 10px;}
+#headerTop a{ display: flex; align-items: center;}
+#headerTop img{ 
   width: 25px; height: 25px; 
   display: block; margin: 0 auto;
 } 
+
+/* ==============헤더(아래)================ */
+
+#headerBottom{ 
+  display: flex; justify-content: space-between;
+  width: 100%;
+}
+
+/* ============헤더(아래-왼쪽)============== */
+
+#headerLeft{ 
+  display: flex; align-items: center; justify-content: center;
+}
+#headerLogo {margin-right : 50px;}
+#headerLogo img{ height: 55px;}
+
+#headerMenu li{ display: flex; justify-content: space-evenly;}
+
+/* ============헤더(아래-오른쪽)============= */
+
+#headerBox ul{ display: none;} 
