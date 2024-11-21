@@ -62,21 +62,35 @@ body{ font-family: "Noto Sans KR";}
 /* ============헤더(아래-오른쪽)============= */
 
 #headerRight{ 
-  width: 300px;;
+  width: 330px;
+  display: flex; justify-content: space-around; align-items: center;
+  margin: 0px 20px; margin-bottom: 10px;
+}
+
+#headerSerach{
+  width: 210px;  height: 40px;
+  border: 1px solid #00256C;
+  border-radius: 10px;
   display: flex; justify-content: space-around; align-items: center;
 }
+#headerSerach input{ 
+  width: 140px; height: 38px;
+  border: none;  
+  display: flex; justify-content: space-around; align-items: center;
+}
+#headerSerach img{ display: block; width: 25px; height: 25px; margin: 5px}
 
 #headerLogin{ 
-  width: 125px;  height: 40px;
-  margin: 10px;
- 
+  width: 130px;  height: 46px;
+  border-radius: 50px;
+  display: flex; justify-content: space-around; align-items: center;
 }
-
 #headerLogin span{
-  width: 120px;  height: 40px;
+  width: 115px;  height: 40px;
   color:white;
   font-weight: bold; font-size: 15px;
   background-color: #00256C ;
   border-radius: 50px;
   display: flex; justify-content: space-around; align-items: center;
 }
+#headerLogin:hover { border: 1px solid #00256C;}
