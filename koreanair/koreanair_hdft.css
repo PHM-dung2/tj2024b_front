@@ -1,7 +1,7 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 *{  
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding : 0px; margin : 0px;
     box-sizing: border-box;
 }
@@ -12,7 +12,9 @@ body{ font-family: "Noto Sans KR";}
 
 /* ================헤더================== */
 
-#header{ width: 1460px; margin: 0 auto;}
+#header{ width: 1460px; margin: 0 auto; 
+  
+}
 
 /* ==============헤더(위)================= */
 
@@ -20,13 +22,17 @@ body{ font-family: "Noto Sans KR";}
   font-size: 14px;
   width: 100%;
   display: flex; justify-content: flex-end; 
+  padding: 0px 20px; margin: 10px 0px;
 }
 #headerTop ul{ display: flex;}
-#headerTop li{ display: flex; justify-content: space-between; padding-left: 10px;}
+#headerTop li{ 
+  display: flex; justify-content: space-between; 
+  padding-left: 22px;
+}
 #headerTop a{ display: flex; align-items: center;}
 #headerTop img{ 
   width: 25px; height: 25px; 
-  display: block; margin: 0 auto;
+  display: block; margin: 0 auto; margin-right: 4px;
 } 
 
 /* ==============헤더(아래)================ */
@@ -34,6 +40,7 @@ body{ font-family: "Noto Sans KR";}
 #headerBottom{ 
   display: flex; justify-content: space-between;
   width: 100%;
+  padding: 10px 0px;
 }
 
 /* ============헤더(아래-왼쪽)============== */
@@ -41,11 +48,35 @@ body{ font-family: "Noto Sans KR";}
 #headerLeft{ 
   display: flex; align-items: center; justify-content: center;
 }
-#headerLogo {margin-right : 50px;}
+#headerLogo { margin-right : 75px;}
 #headerLogo img{ height: 55px;}
 
-#headerMenu li{ display: flex; justify-content: space-evenly;}
+#headerMenu ul{ 
+  display: flex; justify-content: space-evenly;
+  width: 500px;
+}
+#headerMenu p{ font-size: 20px;}
+
+#headerBox ul{ display: none;} 
 
 /* ============헤더(아래-오른쪽)============= */
 
-#headerBox ul{ display: none;} 
+#headerRight{ 
+  width: 300px;;
+  display: flex; justify-content: space-around; align-items: center;
+}
+
+#headerLogin{ 
+  width: 125px;  height: 40px;
+  margin: 10px;
+ 
+}
+
+#headerLogin span{
+  width: 120px;  height: 40px;
+  color:white;
+  font-weight: bold; font-size: 15px;
+  background-color: #00256C ;
+  border-radius: 50px;
+  display: flex; justify-content: space-around; align-items: center;
+}
