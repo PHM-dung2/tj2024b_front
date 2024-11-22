@@ -1,7 +1,7 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 *{  
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding : 0px; margin : 0px;
     box-sizing: border-box;
 }
@@ -64,7 +64,7 @@ body{ font-family: "Noto Sans KR";}
   border-bottom: 3px solid white;
   display: flex;
 }
-#headerMenu li:hover{ border-bottom: 3px solid #00256C;}
+#headerMenu > ul > li:hover{ border-bottom: 3px solid #00256C;}
 #headerMenu p{ 
   font-size: 21px; height: 50px;
   display: flex; align-items: center; justify-content: center;
@@ -81,26 +81,47 @@ body{ font-family: "Noto Sans KR";}
   width: 100%;
   border: 1px solid gainsboro;
   box-shadow: 4px 4px 4px #eeeeee;
-  padding: 30px 0px;
 }
 #headerBox > div{
   width: 1460px;
   margin: 0 auto;
   display: flex; justify-content: space-between;
 }
-#headerBox ul{
-  display: inline-block; 
-  text-align: left;
-  width: 300px;
-}
-
 #headerMenu li:hover #headerBox{
   display: block;
 }
 
-#headerBox > div > div > img{
-  width: 250px;
+#headerLeftbox{
+  display: flex; align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 0px; margin: 25px 0px;
+}
+#headerLeftbox ul{
+  display: inline-block; 
+  text-align: left;
+  width: 300px;
+}
+#headerLeftbox li{
+  color: gainsboro;
+  margin-bottom: 20px;
+}
+#headerLeftbox a{ display: flex;}
+#headerLeftbox img{ 
+  display: inline-block;
+  width: 30px; height: 20px;
+}
+
+#headerRightbox{
+  padding: 30px 0px;
+}
+#headerRightbox a{ 
+  padding: 2px;
+  width: 255px;
+}
+#headerRightbox img{
+  width: 250px; height: 130px;
   display: block;
+  border-radius: 10px;
 }
 /* #headerMenu ul{ display: flex; justify-content: center; }
 #headerBox { 
