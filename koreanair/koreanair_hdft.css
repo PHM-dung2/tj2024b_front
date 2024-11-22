@@ -13,7 +13,7 @@ body{ font-family: "Noto Sans KR";}
 /* ================헤더================== */
 
 #header{ width: 1460px; margin: 0 auto; }
-
+ 
 /* ==============헤더(위)================= */
 
 #headerTop{ 
@@ -55,7 +55,6 @@ body{ font-family: "Noto Sans KR";}
 #headerLogo { margin-right : 75px; margin-bottom : 14px;}
 #headerLogo img{ height: 55px; margin-right: -5px;}
 
-#headerMenu{}
 #headerMenu > ul{ 
   display: flex; justify-content: space-evenly;
   width: 450px;
@@ -80,7 +79,7 @@ body{ font-family: "Noto Sans KR";}
   background-color: white;
   width: 100%;
   border: 1px solid gainsboro;
-  box-shadow: 4px 4px 4px #eeeeee;
+  box-shadow: 3px 3px 3px #e2e2e2;
 }
 #headerBox > div{
   width: 1460px;
@@ -95,55 +94,70 @@ body{ font-family: "Noto Sans KR";}
   display: flex; align-content: flex-start;
   flex-wrap: wrap;
   padding: 20px 0px; margin: 25px 0px;
+  width: 100%
 }
 #headerLeftbox ul{
   display: inline-block; 
   text-align: left;
-  width: 300px;
+  width: 280px;
 }
 #headerLeftbox li{
-  color: gainsboro;
   margin-bottom: 20px;
 }
-#headerLeftbox a{ display: flex;}
-#headerLeftbox img{ 
-  display: inline-block;
-  width: 30px; height: 20px;
+#headerLeftbox a{ 
+  display: flex;
 }
+#headerLeftbox h4{
+  height: 21px; 
+}
+#headerLeftbox div{
+  height: 21px; 
+  color: rgb(161, 161, 161);
+}
+#headerLeftbox span{ 
+  vertical-align: middle;
+  margin-left: 5px;
+}
+#headerLeftbox img{ 
+  width: 25px; height: 15px;
+}
+#headerLeftbox li:hover h4{ border-bottom: 1px solid black;}
+#headerLeftbox li:hover div{ border-bottom: 1px solid rgb(161, 161, 161);}
 
 #headerRightbox{
-  padding: 30px 0px;
+  margin: 25px 0px;
+  padding: 20px 0px;
+  width: 400px;
+  display: flex; justify-content: flex-end; align-content:flex-start;
+  flex-wrap: wrap;
 }
 #headerRightbox a{ 
-  padding: 2px;
-  width: 255px;
-}
-#headerRightbox img{
-  width: 250px; height: 130px;
   display: block;
-  border-radius: 10px;
+  width: 255px; height: 118px;
+  margin-bottom: 20px;
+  position : relative;
+  border-radius: 5px;
+  padding: 3px;
 }
-/* #headerMenu ul{ display: flex; justify-content: center; }
-#headerBox { 
-  display: none;
-  position: relative;
-  width: 100%;
-  background-color: white;
-  border: 1px solid gainsboro;
-  box-shadow: 4px 4px 4px #eeeeee;
-  top : 123px; left: 0px;
+#headerRightbox > a > img{
+  width: 250px; height: 110px;
+  display: block;
+  border-radius: 5px;
 }
-#headerBox ul{ 
-  width: 1460px;
-  line-height: 150%;
+#textimg{ 
+  vertical-align: middle;
+  width: 250px;
   position: absolute;
+  top: 10px; left: 10px;
 }
-#headerBox li:hover{ border-bottom: 1px solid #00256C;}
-#headerMenu li:hover #headerBox{
-  display: block;
-} */
-
-
+#textimg img{ 
+  width: 25px; height: 15px; 
+  display: inline-block;
+  background-color: transparent;
+}
+#textimg h4{ display: inline-block;}
+#textimg span{ vertical-align: middle;}
+#headerRightbox a:hover { border: 1px solid #0040b6;}
 
 /* ============헤더(아래-오른쪽)============= */
 
@@ -170,7 +184,7 @@ body{ font-family: "Noto Sans KR";}
 #headerSerach img{ display: block; width: 25px; height: 25px; }
 
 #headerLogin{ 
-  width: 122px;  height: 46px;
+  width: 122px; height: 46px;
   border-radius: 50px;
   display: flex; justify-content: center; align-items: center;
 }
@@ -183,9 +197,6 @@ body{ font-family: "Noto Sans KR";}
   border-radius: 50px;
   display: flex; justify-content: center; align-items: center;
 }
-
-
-
 
 /* 테스트 */
 #test img{ width: 100%;}
