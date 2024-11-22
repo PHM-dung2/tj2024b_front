@@ -12,9 +12,7 @@ body{ font-family: "Noto Sans KR";}
 
 /* ================헤더================== */
 
-#header{ width: 1460px; margin: 0 auto; 
-  
-}
+#header{ width: 1460px; margin: 0 auto; }
 
 /* ==============헤더(위)================= */
 
@@ -29,7 +27,12 @@ body{ font-family: "Noto Sans KR";}
   display: flex; justify-content: space-between; 
   padding-left: 22px;
 }
-#headerTop a{ display: flex; align-items: center;}
+#headerTop a{ 
+  display: flex; align-items: center;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+#headerTop a:hover{ border: 2px solid rgb(129, 181, 190);}
 #headerTop img{ 
   width: 25px; height: 25px; 
   display: block; margin: 0 auto; margin-right: 4px;
@@ -40,57 +43,71 @@ body{ font-family: "Noto Sans KR";}
 #headerBottom{ 
   display: flex; justify-content: space-between;
   width: 100%;
-  padding: 10px 0px;
+  margin-top: 10px;
 }
 
 /* ============헤더(아래-왼쪽)============== */
 
 #headerLeft{ 
-  display: flex; align-items: center; justify-content: center;
+  display: flex; justify-content: space-between; align-items: center; 
+  width: 770px;
 }
-#headerLogo { margin-right : 75px;}
-#headerLogo img{ height: 55px;}
+#headerLogo { margin-right : 75px; margin-bottom : 14px;}
+#headerLogo img{ height: 55px; margin-right: -5px;}
 
 #headerMenu ul{ 
   display: flex; justify-content: space-evenly;
-  width: 500px;
+  width: 450px;
 }
-#headerMenu p{ font-size: 20px;}
+#headerMenu li{ border-bottom: 3px solid white;}
+#headerMenu li:hover{ border-bottom: 3px solid #00256C;}
+#headerMenu p{ 
+  font-size: 21px; height: 50px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0px 10px 20px 10px;
+}
+#headerMenu p:hover{ font-weight: bold;}
 
 #headerBox ul{ display: none;} 
 
 /* ============헤더(아래-오른쪽)============= */
 
 #headerRight{ 
-  width: 330px;
+  width: 370px;
   display: flex; justify-content: space-around; align-items: center;
-  margin: 0px 20px; margin-bottom: 10px;
+  margin: 0px 20px;
 }
 
+#headerRight div{ margin: 10px 0px;}
 #headerSerach{
-  width: 210px;  height: 40px;
+  width: 215px;  height: 41px;
   border: 1px solid #00256C;
-  border-radius: 10px;
-  display: flex; justify-content: space-around; align-items: center;
+  border-radius: 8px;
+  display: flex; align-items: center; padding: 0px 15px;
 }
 #headerSerach input{ 
-  width: 140px; height: 38px;
+  width: 160px; height: 35px;
+  letter-spacing: -1px;
   border: none;  
-  display: flex; justify-content: space-around; align-items: center;
+  display: flex; align-items: center;
 }
-#headerSerach img{ display: block; width: 25px; height: 25px; margin: 5px}
+#headerSerach:hover { border: 2px solid #00256C;}
+#headerSerach img{ display: block; width: 25px; height: 25px; }
 
 #headerLogin{ 
-  width: 130px;  height: 46px;
+  width: 122px;  height: 46px;
   border-radius: 50px;
-  display: flex; justify-content: space-around; align-items: center;
+  display: flex; justify-content: center; align-items: center;
 }
+#headerLogin:hover { border: 1px solid #00256C;}
 #headerLogin span{
-  width: 115px;  height: 40px;
+  width: 116px;  height: 40px;
   color:white;
   font-weight: bold; font-size: 15px;
   background-color: #00256C ;
   border-radius: 50px;
-  display: flex; justify-content: space-around; align-items: center;
+  display: flex; justify-content: center; align-items: center;
 }
-#headerLogin:hover { border: 1px solid #00256C;}
+
+/* 테스트 */
+#test img{ width: 100%;}
