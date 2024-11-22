@@ -106,14 +106,12 @@ body{ font-family: "Noto Sans KR";}
 }
 #headerLeftbox a{ 
   display: flex;
+  color: rgb(92, 92, 92);
+}#headerLeftbox h4{ 
+  display: flex;
+  color: black;
 }
-#headerLeftbox h4{
-  height: 21px; 
-}
-#headerLeftbox div{
-  height: 21px; 
-  color: rgb(161, 161, 161);
-}
+
 #headerLeftbox span{ 
   vertical-align: middle;
   margin-left: 5px;
@@ -121,8 +119,8 @@ body{ font-family: "Noto Sans KR";}
 #headerLeftbox img{ 
   width: 25px; height: 15px;
 }
-#headerLeftbox li:hover h4{ border-bottom: 1px solid black;}
-#headerLeftbox li:hover div{ border-bottom: 1px solid rgb(161, 161, 161);}
+#headerLeftbox li:hover h4{ text-decoration: underline;}
+#headerLeftbox li:hover a{ text-decoration: underline;}
 
 #headerRightbox{
   margin: 25px 0px;
@@ -133,30 +131,34 @@ body{ font-family: "Noto Sans KR";}
 }
 #headerRightbox a{ 
   display: block;
-  width: 255px; height: 118px;
-  margin-bottom: 20px;
+  width: 257px; height: 118px;
   position : relative;
   border-radius: 5px;
-  padding: 3px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding : 3px 0px 0px 2px;
+  border: 1px solid white;
 }
+
 #headerRightbox > a > img{
   width: 250px; height: 110px;
   display: block;
+  border: 1px solid white;
   border-radius: 5px;
 }
 #textimg{ 
   vertical-align: middle;
-  width: 250px;
+  width: 160px;
   position: absolute;
-  top: 10px; left: 10px;
+  top: 25px; left: 20px;
 }
 #textimg img{ 
   width: 25px; height: 15px; 
   display: inline-block;
-  background-color: transparent;
 }
-#textimg h4{ display: inline-block;}
+#textimg h4{ display: inline-block; flex-wrap: wrap;}
 #textimg span{ vertical-align: middle;}
+
 #headerRightbox a:hover { border: 1px solid #0040b6;}
 
 /* ============헤더(아래-오른쪽)============= */
@@ -200,3 +202,40 @@ body{ font-family: "Noto Sans KR";}
 
 /* 테스트 */
 #test img{ width: 100%;}
+
+/* ==================푸터=================== */
+#footer{ width: 1460px; margin: 0 auto;}
+
+/* ================푸터(위쪽)================ */
+#footerTop{
+  width: 100%;
+  margin-top: 30px; padding: 30px 0px;
+  display: flex; justify-content: space-between;
+  border-bottom: 1px solid rgb(219, 219, 219) ;
+}
+#footerTop ul{
+  
+}
+#footerTop li{ margin-bottom: 20px;}
+#footerTop a{color : rgb(92, 92, 92);}
+#footerTop li:hover a{ text-decoration: underline;}
+
+/* ===============푸터(아래쪽)================ */
+#footerbottom{ width: 1460px; margin: 0 auto;}
+
+/* =============푸터(아래쪽-위)================ */
+#ftbottomUp{
+  width: 100%;
+  margin: 35px 0px;
+  display: flex; justify-content: space-between;
+}
+#ftbottomUp img{ display: inline; height: 35px;}
+
+#footerLeft{ display: flex; justify-content: center; align-items: center;}
+#ftLeftimg{ margin-right: 30px;}
+#ftLeftimg img{  margin-right: 10px;}
+#ftRightimg img{ margin-right: 15px;}
+
+
+/* =============푸터(아래쪽-아래)=============== */
+#footerRight img{}
