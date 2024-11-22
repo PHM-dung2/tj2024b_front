@@ -1,7 +1,7 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 *{  
-    /* border: 1px solid red; */
+    border: 1px solid red;
     padding : 0px; margin : 0px;
     box-sizing: border-box;
 }
@@ -55,11 +55,15 @@ body{ font-family: "Noto Sans KR";}
 #headerLogo { margin-right : 75px; margin-bottom : 14px;}
 #headerLogo img{ height: 55px; margin-right: -5px;}
 
-#headerMenu ul{ 
+#headerMenu{}
+#headerMenu > ul{ 
   display: flex; justify-content: space-evenly;
   width: 450px;
 }
-#headerMenu li{ border-bottom: 3px solid white;}
+#headerMenu > ul > li{ 
+  border-bottom: 3px solid white;
+  display: flex;
+}
 #headerMenu li:hover{ border-bottom: 3px solid #00256C;}
 #headerMenu p{ 
   font-size: 21px; height: 50px;
@@ -68,19 +72,69 @@ body{ font-family: "Noto Sans KR";}
 }
 #headerMenu p:hover{ font-weight: bold;}
 
-#headerBox ul{ display: none;} 
+/* ===============드롭다운=============== */
+#headerBox { 
+  display: none;
+  position: absolute;
+  top : 123px; left: 0px;
+  background-color: white;
+  width: 100%;
+  border: 1px solid gainsboro;
+  box-shadow: 4px 4px 4px #eeeeee;
+  padding: 30px 0px;
+}
+#headerBox > div{
+  width: 1460px;
+  margin: 0 auto;
+  display: flex; justify-content: space-between;
+}
+#headerBox ul{
+  display: inline-block; 
+  text-align: left;
+  width: 300px;
+}
+
+#headerMenu li:hover #headerBox{
+  display: block;
+}
+
+#headerBox > div > div > img{
+  width: 250px;
+  display: block;
+}
+/* #headerMenu ul{ display: flex; justify-content: center; }
+#headerBox { 
+  display: none;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border: 1px solid gainsboro;
+  box-shadow: 4px 4px 4px #eeeeee;
+  top : 123px; left: 0px;
+}
+#headerBox ul{ 
+  width: 1460px;
+  line-height: 150%;
+  position: absolute;
+}
+#headerBox li:hover{ border-bottom: 1px solid #00256C;}
+#headerMenu li:hover #headerBox{
+  display: block;
+} */
+
+
 
 /* ============헤더(아래-오른쪽)============= */
 
 #headerRight{ 
   width: 370px;
   display: flex; justify-content: space-around; align-items: center;
-  margin: 0px 20px;
+  margin: 0px 10px 10px 10px;
 }
 
-#headerRight div{ margin: 10px 0px;}
+#headerRight div{ margin: 8px 0px;}
 #headerSerach{
-  width: 215px;  height: 41px;
+  width: 215px;  height: 40px;
   border: 1px solid #00256C;
   border-radius: 8px;
   display: flex; align-items: center; padding: 0px 15px;
@@ -108,6 +162,9 @@ body{ font-family: "Noto Sans KR";}
   border-radius: 50px;
   display: flex; justify-content: center; align-items: center;
 }
+
+
+
 
 /* 테스트 */
 #test img{ width: 100%;}

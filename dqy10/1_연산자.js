@@ -167,3 +167,36 @@ let 결과1 = 점수 >= 80 ? '합격' : '불합격' ;
 console.log( `[7] 결과 : ${ 결과1 }`)
 let 결과2 = 점수 >= 80 ? '합격' : 점수 >=60 ? '재시험' : '불합격' ; 
 console.log(` [7] 결과 : ${ 결과2 }` )
+
+
+// [지문9] 1차점수 와 2차점수 prompt함수로 각 입력받아서
+//          총점이 150점 이상이면 '합격' 아니면 '불합격
+//          HTML의 <h3> 에 표시하시오
+// (1) 입력/저장
+let 점수1차 = Number( prompt('[지문9] 1차점수') )     // 변수 이름 띄어쓰기 숫자 특수문자로 시작 안됨
+let 점수2차 = Number( prompt('[지문9] 2차점수') )
+// (2) 연산
+let 총점 = Number( 점수1차 + 점수2차 )
+let 합격여부 = 총점 >= 150 ? '합격' : '불합격' ;
+// (3) 출력
+let importHTML = `<h3>${ 합격여부 }<h3?`
+document.write( importHTML )
+
+// [지문10] 두 사람의 이름을 prompt함수로 각 입력받아서
+//          만일 이름이 '유재석' 이면 뒤에 (방장) 이라고 이름 뒤에 붙이고 아니면 생략한다.
+//          ex) 유재석(반장) , 강호동
+//          HTML의 <ol> 에 표시하시오.
+// (1) 입력/저장
+let Name1 = prompt('[지문10] 이름1')
+let Name2 = prompt('[지문10] 이름2')
+// (2) 연산
+// let Check1 = Name1 == "유재석" ? Name1 + '(방장)' : Name1 ;
+// let Check2 = Name2 == "유재석" ? Name2 + '(방장)' : Name2 ;
+let Name1 = Name1 == "유재석" ? Name1`(방장)` : Name1 ;
+let Name2 = Name2 == "유재석" ? Name2`(방장)` : Name2 ;
+// (3) 출력
+let importCheck = ` <ol> 
+                        <li>${ Check1 }</li> 
+                        <li>${ Check2 }</li> 
+                    </ol> `
+document.write( importCheck )
