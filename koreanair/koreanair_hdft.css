@@ -14,7 +14,7 @@ body{ font-family: "Noto Sans KR";}
 
 #header{ width: 1460px; margin: 0 auto; }
  
-/* ==============헤더(위)================= */
+/* ==============헤더(상단)=============== */
 
 #headerTop{ 
   font-size: 14px;
@@ -30,15 +30,15 @@ body{ font-family: "Noto Sans KR";}
 #headerTop a{ 
   display: flex; align-items: center;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 1px solid white;
 }
-#headerTop a:hover{ border: 2px solid rgb(129, 181, 190);}
+#headerTop a:hover{ border: 1px solid #0c5aeb;}
 #headerTop img{ 
   width: 25px; height: 25px; 
   display: block; margin: 0 auto; margin-right: 4px;
 } 
 
-/* ==============헤더(아래)================ */
+/* ==============헤더(하단)================ */
 
 #headerBottom{ 
   display: flex; justify-content: space-between;
@@ -46,7 +46,7 @@ body{ font-family: "Noto Sans KR";}
   margin-top: 10px;
 }
 
-/* ============헤더(아래-왼쪽)============== */
+/* ============헤더(하단-왼쪽)============== */
 
 #headerLeft{ 
   display: flex; justify-content: space-between; align-items: center; 
@@ -161,7 +161,7 @@ body{ font-family: "Noto Sans KR";}
 
 #headerRightbox a:hover { border: 1px solid #0040b6;}
 
-/* ============헤더(아래-오른쪽)============= */
+/* ============헤더(하단-오른쪽)============= */
 
 #headerRight{ 
   width: 370px;
@@ -200,42 +200,102 @@ body{ font-family: "Noto Sans KR";}
   display: flex; justify-content: center; align-items: center;
 }
 
-/* 테스트 */
-#test img{ width: 100%;}
-
 /* ==================푸터=================== */
 #footer{ width: 1460px; margin: 0 auto;}
 
-/* ================푸터(위쪽)================ */
+/* ================푸터(상단)================ */
 #footerTop{
   width: 100%;
   margin-top: 30px; padding: 30px 0px;
-  display: flex; justify-content: space-between;
   border-bottom: 1px solid rgb(219, 219, 219) ;
 }
-#footerTop ul{
-  
-}
+#footerTop { display: flex; justify-content: space-between;}
+
+#footerTop ul{ text-align: left; width: 25%;}
 #footerTop li{ margin-bottom: 20px;}
 #footerTop a{color : rgb(92, 92, 92);}
 #footerTop li:hover a{ text-decoration: underline;}
 
-/* ===============푸터(아래쪽)================ */
-#footerbottom{ width: 1460px; margin: 0 auto;}
+/* ================푸터(하단)================ */
+#footerbottom{ width: 100%;}
 
-/* =============푸터(아래쪽-위)================ */
+/* =============푸터(하단-위)================ */
 #ftbottomUp{
   width: 100%;
-  margin: 35px 0px;
+  margin: 25px 0px;
   display: flex; justify-content: space-between;
 }
-#ftbottomUp img{ display: inline; height: 35px;}
-
 #footerLeft{ display: flex; justify-content: center; align-items: center;}
 #ftLeftimg{ margin-right: 30px;}
-#ftLeftimg img{  margin-right: 10px;}
-#ftRightimg img{ margin-right: 15px;}
+#ftRightimg img{ margin-right: 10px;}
 
+#ftLeftimg img{ 
+  display: inline; height: 45px;
+  padding: 5px; 
+  border: 1px solid white;
+  border-radius: 5px;
+}
+#ftRightimg img{ 
+  display: inline; height: 40px;
+  padding: 2px; 
+  border: 1px solid white;
+  border-radius: 5px;
+}
+#ftLeftimg img:active{ border: 1px solid #0c5aeb; border-radius: 5px;}
+#ftRightimg img:hover{ border: 1px solid #0c5aeb; border-radius: 100%;}
 
-/* =============푸터(아래쪽-아래)=============== */
-#footerRight img{}
+#footerRight img{ height: 45px; padding-top: 10px;}
+
+/* =============푸터(하단-아래)=============== */
+#ftbottomDown{
+  width: 100%;
+  margin-top: 35px; margin-bottom: 8px;
+  display: flex; justify-content: space-between;
+}
+#ftbottomDownmain{ width: 55%;} 
+
+#ftBottomcontent{ 
+  font-size: 14px;
+  display: flex; flex-wrap: wrap;
+  vertical-align: center;
+}
+#ftBottomcontent div{ 
+  padding-right: 5px;
+}
+#ftBottomcontent h4{ display: inline;}
+#ftBottomcontent span{ 
+  font-size:12px; color: #dbdbdb;
+  padding-right: 5px;
+}
+#footerYear{ 
+  font-size: 10px; color: #555555;
+  margin: 12px 0px;
+}
+
+#ftBottomimg{ 
+  width: 16%; 
+  margin-right: 5px;
+  display: flex; justify-content: center; align-items: flex-start;
+}
+#ftBottomimg a{ display: block;}
+#ftBottomimg img{ 
+  margin: 5px;
+  border: 1px solid white; border-radius: 5px;
+}
+#ftBottomimg img:hover{ border: 1px solid #0c5aeb; border-radius: 5px;}
+
+/* ==================팝업================== */
+#popup{ 
+  position: fixed;
+  bottom: 18px; right: 40px;
+}
+#popup a{ display: inline;}
+#popup img{
+  width: 65px; height: 65px;
+  padding: 14px;
+  margin-top: 10px;
+  display: block; 
+  border: 1px solid #dadce2;
+  border-radius: 100%;
+}
+#popupClose img{ padding: 20px;}
