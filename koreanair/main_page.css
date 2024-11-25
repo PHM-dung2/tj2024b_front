@@ -1,0 +1,1259 @@
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+* {
+    /* border : solid 1px red; */
+    margin : 0px;
+    padding : 0px;
+    box-sizing : border-box;
+    /* font-family : Noto Sans KR,Malgun Gothic,sans-serif; */
+    font-family : "Noto sans KR";
+}
+a {
+    color : black;
+    text-decoration : none;
+}
+li {
+  list-style-type : none;  
+}
+
+/* #wrap {
+    display : flex;
+    flex-direction: column;
+} */
+
+/* #region header */
+
+#header {
+    width: 100%;
+    border-bottom: 1px solid #d9dbe1;
+}
+#header > div{ 
+    width: 1460px;
+    margin: 0 auto;
+}
+ 
+/* ==============헤더(상단)=============== */
+
+#headerTop{ 
+    font-size: 14px;
+    width: 100%;
+    display: flex; justify-content: flex-end; 
+    padding: 10px 20px;
+  }
+  #headerTop ul{ display: flex;}
+  #headerTop li{ 
+    display: flex; justify-content: space-between; 
+    padding-left: 22px;
+  }
+  #headerTop a{ 
+    display: flex; align-items: center;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+  #headerTop a:hover{ border: 1px solid #0c5aeb;}
+  #headerTop img{ 
+    width: 25px; height: 25px; 
+    display: block; margin: 0 auto; margin-right: 4px;
+  } 
+  
+  /* ==============헤더(하단)================ */
+  
+  #headerBottom{ 
+    display: flex; justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* ============헤더(하단-왼쪽)============== */
+  
+  #headerLeft{ 
+    display: flex; justify-content: space-between; align-items: center; 
+    width: 770px;
+  }
+  #headerLogo { margin-right : 75px; margin-bottom : 14px;}
+  #headerLogo img{ height: 55px; margin-right: -5px;}
+  
+  #headerMenu > ul{ 
+    display: flex; justify-content: space-evenly;
+    width: 450px;
+  }
+  #headerMenu > ul > li{ 
+    border-bottom: 3px solid white;
+    display: flex;
+  }
+  #headerMenu > ul > li:hover{ border-bottom: 3px solid #00256C;}
+  #headerMenu p{ 
+    font-size: 21px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0px 10px 20px 10px;
+  }
+  #headerMenu p:hover{ font-weight: bold;}
+  
+  /* ===============드롭다운=============== */
+  #headerBox { 
+    display: none;
+    position: absolute;
+    top : 120px; left: 0px;
+    background-color: white;
+    width: 100%;
+    border: 1px solid gainsboro;
+    box-shadow: 3px 3px 3px #e2e2e2;
+    z-index: 100;
+  }
+  #headerBox > div{
+    width: 1460px;
+    margin: 0 auto;
+    display: flex; justify-content: space-between;
+  }
+  #headerMenu li:hover #headerBox{
+    display: block;
+  }
+  
+  #headerLeftbox{
+    display: flex; align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 0px; margin: 25px 0px;
+    width: 100%
+  }
+  #headerLeftbox ul{
+    display: inline-block; 
+    text-align: left;
+    width: 280px;
+  }
+  #headerLeftbox li{
+    margin-bottom: 20px;
+  }
+  #headerLeftbox a{ 
+    display: flex;
+    color: rgb(92, 92, 92);
+  }#headerLeftbox h4{ 
+    display: flex;
+    color: black;
+  }
+  
+  #headerLeftbox span{ 
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  #headerLeftbox img{ 
+    width: 25px; height: 15px;
+  }
+  #headerLeftbox li:hover h4{ text-decoration: underline;}
+  #headerLeftbox li:hover a{ text-decoration: underline;}
+  
+  #headerRightbox{
+    margin: 25px 0px;
+    padding: 20px 0px;
+    width: 400px;
+    display: flex; justify-content: flex-end; align-content:flex-start;
+    flex-wrap: wrap;
+  }
+  #headerRightbox a{ 
+    display: block;
+    width: 257px; height: 118px;
+    position : relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding : 3px 0px 0px 2px;
+    border: 1px solid white;
+  }
+  
+  #headerRightbox > a > img{
+    width: 250px; height: 110px;
+    display: block;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  #textimg{ 
+    vertical-align: middle;
+    width: 160px;
+    position: absolute;
+    top: 25px; left: 20px;
+  }
+  #textimg img{ 
+    width: 25px; height: 15px; 
+    display: inline-block;
+  }
+  #textimg h4{ display: inline-block; flex-wrap: wrap;}
+  #textimg span{ vertical-align: middle;}
+  
+  #headerRightbox a:hover { border: 1px solid #0040b6;}
+  
+  /* ============헤더(하단-오른쪽)============= */
+  
+  #headerRight{ 
+    width: 370px;
+    display: flex; justify-content: space-around; align-items: center;
+    margin: 0px 10px 10px 10px;
+  }
+  
+  #headerRight div{ margin: 8px 0px;}
+  #headerSerach{
+    width: 215px;  height: 40px;
+    border: 1px solid #00256C;
+    border-radius: 8px;
+    display: flex; align-items: center; padding: 0px 15px;
+  }
+  #headerSerach input{ 
+    width: 160px; height: 35px;
+    letter-spacing: -1px;
+    border: none;  
+    display: flex; align-items: center;
+  }
+  #headerSerach input:focus {
+    outline: 2px solid #d50000; /* outline 테두리 속성 수정 */
+    outline: none;
+  } 
+  
+  #headerSerach:hover { border: 2px solid #00256C;}
+  #headerSerach img{ display: block; width: 25px; height: 25px; }
+  
+  #headerLogin{ 
+    width: 122px; height: 46px;
+    border-radius: 50px;
+    display: flex; justify-content: center; align-items: center;
+  }
+  #headerLogin:hover { border: 1px solid #00256C;}
+  #headerLogin span{
+    width: 116px;  height: 40px;
+    color:white;
+    font-weight: bold; font-size: 15px;
+    background-color: #00256C ;
+    border-radius: 50px;
+    display: flex; justify-content: center; align-items: center;
+  }
+
+/* #endregion header */
+
+/* #region main */
+
+/* #region main > ticket_reservation */
+#main > #ticket_reservation {
+    position: relative;
+    max-width: inherit;
+    height : 400px;
+    background-image : url("./img/main_page/main_banner.jpg");
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+#main > #ticket_reservation > #main_service {
+    margin-top : -150px;
+    margin-left : -590px;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    width : 1180px;
+    height : 220px;
+    border-radius : 20px;
+    /* background-color: #65728a; */
+}
+#main > #ticket_reservation > #main_service > #main_service_top {
+    position: relative;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > a {
+    width : 25%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > button {
+    padding : 15px 30px;
+    border : solid 0px black;
+    border-top-left-radius : 15px;
+    border-top-right-radius : 15px;
+    width : 25%;
+    text-align: center;
+    color : #ffffff;
+    background-color: #65728a;
+    font-size : 16px;
+    cursor : pointer;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > button:hover {
+    color : #ffffff;
+    text-decoration : underline;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing {
+    margin-bottom : 30px;
+    padding : 0px 40px;
+    position : absolute;
+    top : 54px;
+    left : 0px;
+    width : 100%;
+    height: 220px;
+    /* border-radius: 20px; */
+    border-top-right-radius: 20px;
+    border-bottom-left-radius : 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    z-index: 11;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top {
+    padding : 30px 0px;
+    display : flex;
+    justify-content : space-between;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left {
+    display : flex;
+    align-items: center;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > div {
+    /* margin : 0px 30px 0px 0px; */
+    display : flex;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #t_t_l {
+    margin-right : 30px;
+    border : solid 1px #d9dbe1;
+    border-radius : 30px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #t_t_l > #tk {
+    padding : 10px 20px;
+    border-radius : 30px;
+    color : white;
+    background-color: #00256c;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #t_t_l > #mtk {
+    padding : 10px 20px;
+    border-radius : 30px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl {
+    position: relative;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl > a {
+    padding : 0px 10px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl > #ttl_1 {
+    font-weight : bold;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl > #ttl_2 {
+    color : #555555;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl > #ttl_3 {
+    text-decoration : underline;
+    color : #555555;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl > .opener {
+    border : none;
+    background-color: #00000000;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_left > #ttl > div {
+    position : absolute;
+    top : 25px;
+    left : 10px;
+    width :30px;
+    height: 3px;
+    background-color: red;
+}
+
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_right {
+    display : flex;
+    align-items: center;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_right > div {
+    margin : 0px 5px;
+    font-size : 16px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_top > #ticketing_top_right > .opener {
+    border : none;
+    background-color: #00000000;
+}
+
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom {
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_1 {
+    display : flex;
+    justify-content : space-between;
+    align-items: center;
+    width : 24%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_1 > .city_name {
+    width : 40.5%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_1 > .city_name:hover {
+    border : solid 1px #0064de;
+    border-radius : 3px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_1 > div > .city {
+    font-size : 32px;
+    font-weight : bold;
+    text-align: center;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_1 > div > div {
+    text-align: center;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_2 {
+    border-bottom : solid 1px black;
+    width : 25%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_2 > p {
+    margin : 10px 0px;
+    font-size : 14px;
+    color : #767676;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_2 > div {
+    padding : 10px 0px;
+    display : flex;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_2 > div:hover {
+    padding : 10px 0px;
+    border : solid 1px #0064de;
+    border-radius : 3px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_2 > div > img {
+    width : 24px;
+    height : 24px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_2 > div > button {
+    width : 100%;
+    border : none;
+    background-color: white;
+    font-size : 16px;
+    color : #767676;
+    text-align: start;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_3 {
+    /* padding-bottom : 10px; */
+    border-bottom : solid 1px black;
+    width : 13%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_3 > p {
+    margin : 10px 0px;
+    font-size : 14px;
+    color : #767676;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_3 > div {
+    padding : 10px 0px;
+    display : flex;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_3 > div:hover {
+    padding : 10px 0px;
+    border : solid 1px #0064de;
+    border-radius : 3px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_3 > div > button {
+    width : 100%;
+    border : none;
+    background-color: white;
+    font-size : 16px;
+    color : black;
+    font-weight : bold;
+    text-align: start;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_3 > div > img {
+    width : 24px;
+    height : 24px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_4 {
+    /* padding-bottom : 10px; */
+    border-bottom : solid 1px black;
+    width : 13%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_4 > p {
+    margin : 10px 0px;
+    font-size : 14px;
+    color : #767676;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_4 > div {
+    padding : 10px 0px;
+    display : flex;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_4 > div:hover {
+    padding : 10px 0px;
+    border : solid 1px #0064de;
+    border-radius : 3px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_4 > div > button {
+    width : 100%;
+    border : none;
+    background-color: white;
+    font-size : 16px;
+    color : #767676;
+    text-align: start;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_4 > div > img {
+    width: 24px;
+    height : 24px;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_5 {
+    margin-top : 30px;
+    display : flex;
+    align-items: end;
+    width : 10%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_5 > button {
+    padding : 10px;
+    border-radius: 10px;
+    font-size : 16px;
+    color : white;
+    background-color: #00256c;
+    width : 100%;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing > #ticketing_bottom > #t_b_5 > button:hover {
+    box-shadow : 0px 0px 0px 2px white, 0px 0px 0px 3px #0064de;
+}
+#main > #ticket_reservation > #main_service > #main_service_top > #ticketing_back {
+    margin-bottom : 30px;
+    padding : 0px 40px;
+    position : absolute;
+    top : 54px;
+    left : 0px;
+    width : 100%;
+    height: 220px;
+    /* border-radius: 20px; */
+    border-bottom-left-radius : 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #65728a;
+    z-index: 10;
+}
+/* #endregion main > ticket_reservation */
+
+/* #region main > top_information */
+
+#main > #top_information {
+    display : flex;
+    justify-content : center;
+    margin : 100px;
+}
+#main > #top_information > .top_box {
+    margin : 15px;
+    border : solid 3px #f7f7f7;
+    border-radius : 10px;
+    background-color: #ffffff;
+    width : 400px;
+    height : 100%;
+    box-shadow : 0px 0px 15px #0000001a;
+}
+#main > #top_information > .top_box:hover {
+    text-decoration : underline;
+    border-radius : 10px;
+    overflow : hidden;
+}
+#main > #top_information > .top_box:hover img {
+    transform : scale(1.16);
+    transition-duration : 0.7s;
+    border-radius : 10px 10px 0px 0px;
+    overflow : hidden;
+}
+#main > #top_information > .top_box > a:hover {
+    border-radius : 10px 10px 0px 0px;
+    overflow : hidden;
+}
+#main > #top_information > .top_box > a > p {
+    /* margin-bottom : 30px; */
+    padding : 20px 30px 50px 30px;
+    font-size : 1.15em;
+    font-weight : bold;
+    border-radius : 10px;
+    text-decoration: none;
+}
+#main > #top_information > .top_box > a > p:hover {
+    margin-bottom : 30px;
+    padding : 20px 30px;
+    font-size : 1.15em;
+    font-weight : bold;
+    border-radius : 10px;
+    text-decoration: none;
+    overflow : hidden;
+}
+#main > #top_information > .top_box > a > .img_box {
+    overflow : hidden;
+    border-radius : 10px 10px 0px 0px;
+}
+#main > #top_information > .top_box > a > .img_box:hover {
+    /* border-radius : 10px 10px 0px 0px; */
+    overflow : hidden;
+}
+#main > #top_information > .top_box > a > .img_box > img {
+    border-radius : 10px 10px 0px 0px;
+    width : 100%;
+    height : 100%;
+    transition-duration : 0.5s;
+    object-fit : cover;
+}
+
+/* #endregion main > top_information */
+
+/* #region main > middle_information */
+
+#main > #middle_information {
+    margin-bottom : 80px;
+    width : 100%;
+}
+
+/* #region main > middle_information > middle_top */
+
+#main > #middle_information > #middle_top {
+    margin : 0px auto 30px auto;
+    margin-bottom : 30px;
+    display : flex;
+    justify-content : center;
+    align-items: flex-end;
+}
+#main > #middle_information > #middle_top > #middle_top1 {
+    width : 1200px;
+}
+#main > #middle_information > #middle_top > #middle_top1 > p {
+    font-size : 28px;
+    font-weight : bold;
+}
+#main > #middle_information > #middle_top > #middle_top2 {
+    position : relative;
+    font-size : 14px;
+    color : #555555;
+    height : 100%;
+}
+#main > #middle_information > #middle_top > #middle_top2:hover {
+    border-radius : 3px;
+    box-shadow: 0 0 0 1px #0064de;
+}
+#main > #middle_information > #middle_top > #middle_top2 > #bc {
+    display : inline-block;
+    position : absolute;
+    bottom : 0px;
+    left : 0px;
+    z-index: -1;
+    width : 52px;
+    height : 8px;
+    background-color : #8be0f8;
+}
+
+/* #endregion main > middle_information > middle_top */
+
+/* #region main > middle_information > middle_bottom */
+
+#main > #middle_information > #middle_bottom {
+    display : flex;
+    justify-content : center;
+}
+#main > #middle_information > #middle_bottom > ul {
+    margin-right : 50px;
+    width: 705px;
+}
+#main > #middle_information > #middle_bottom > ul > li > a {
+    padding : 25px 0px;
+    display : flex;
+    justify-content : space-between;
+    border-bottom : solid 1px #d9dbe1;
+    font-size : 16px;
+    font-weight : bold;
+}
+#main > #middle_information > #middle_bottom > ul > li > a:hover span {
+    text-decoration : underline;
+}
+#main > #middle_information > #middle_bottom > ul > li > a:hover .date_color {
+    text-decoration: none;
+}
+#main > #middle_information > #middle_bottom > ul > li > a > .date_color {
+    font-size : 14px;
+    font-weight : normal;
+    color : #767676;
+    text-decoration : none;
+}
+#main > #middle_information > #middle_bottom > div {
+    position : relative;
+    width : 500px;
+}
+#main > #middle_information > #middle_bottom > div:hover {
+    /* border : solid 1px purple; */
+    border-radius : 10px;
+    box-shadow : 0 0 0 2px #ffffff, 0 0 0 3px #0064de;
+}
+#main > #middle_information > #middle_bottom > div > img {
+    border-radius : 10px;
+    width : 100%;
+    height : 100%;
+}
+#main > #middle_information > #middle_bottom > div > div {
+    margin-right : 215px;
+    padding : 45px;
+    position : absolute;
+    top : 0px;
+    left : 0px;
+    color : white;
+}
+#main > #middle_information > #middle_bottom > div > div > span {
+    display : inline-block;
+    margin-bottom : 10px;
+    font-size : 18px;
+    font-weight: 700;
+}
+#main > #middle_information > #middle_bottom > div > div > p {
+    font-size : 14px;
+    line-height: 160%;
+}
+
+/* #endregion main > middle_information > middle_bottom */
+
+/* #endregion main > middle_information */
+
+/* #region main > bottom_information */
+
+#main > #bottom_information {
+    border-bottom : solid 1px #d9d9d9;
+    background-color : #d0e7f6;
+}
+#main > #bottom_information > #bottom_service {
+    margin : 0px auto;
+    width : 1280px;
+}
+#main > #bottom_information > #bottom_service > #bottom_service_title {
+    padding-top : 50px;
+    padding-bottom : 30px;
+    font-size : 28px;
+    font-weight: 700;
+}
+#main > #bottom_information > #bottom_service > #exp {
+    padding-bottom : 30px;
+    display : flex;
+    justify-content : space-between;
+    transition-delay : 0.05s;
+    transition-duration : 0.3s;
+}
+#main > #bottom_information > #bottom_service > #exp:has(#exp_card1:hover, #exp_card2:hover, #exp_card3:hover, #exp_card4:hover, #exp_card5:hover, #exp_card6:hover, #exp_card7:hover) {
+    padding-bottom : 90px;
+    transition-duration: 0.3s;
+}
+/* #main > #bottom_information > #bottom_service > #exp:focus-within {
+    padding-bottom : 90px;
+} */
+
+/* #region exp_card1 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 > #exp_link1 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : 20px;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1:hover > #exp_link1 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 > #exp_link1 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card1 > #exp_link1 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card1 */
+
+/* #region exp_card2 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 > #exp_link2 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : 25px;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2:hover > #exp_link2 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 > #exp_link2 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card2 > #exp_link2 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card2 */
+
+/* #region exp_card3 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 > #exp_link3 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : -11px;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3:hover > #exp_link3 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 > #exp_link3 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card3 > #exp_link3 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card3 */
+
+/* #region exp_card4 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 > #exp_link4 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : -95px;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4:hover > #exp_link4 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 > #exp_link4 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card4 > #exp_link4 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card4 */
+
+/* #region exp_card5 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 > #exp_link5 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : 25px;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5:hover > #exp_link5 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 > #exp_link5 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card5 > #exp_link5 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card5 */
+
+/* #region exp_card6 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 > #exp_link6 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : -4px;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6:hover > #exp_link6 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 > #exp_link6 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card6 > #exp_link6 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card6 */
+
+/* #region exp_card7 */
+
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 {
+    position : relative;
+    border : none;
+    border-radius : 10px;
+    background-color : #e8f3fb;
+    width : 160px;
+    text-align: center;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 125%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7:hover {
+    text-decoration : underline;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 > p {
+    padding-top : 20px;
+    text-align: center;
+    font-size : 16px;
+    font-weight: bold;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 > div {
+    text-align: center;
+    padding : 10px 20px;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 > div > img {
+    width : 50%;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 > #exp_link7 {
+    display : none;
+    position : absolute;
+    bottom : -65px;
+    left : 0%;
+    padding : 15px 10px;
+    width : max-content;
+    border-radius : 10px;
+    font-size : 16px;
+    background-color : white;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7:hover > #exp_link7 {
+    display : block;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 > #exp_link7 > span > a {
+    padding : 0px 5px;
+    display : inline-block;
+    text-decoration : underline;
+    width : max-content;
+}
+#main > #bottom_information > #bottom_service > #exp > #exp_card7 > #exp_link7 > span > a:hover {
+    text-decoration: underline;
+}
+
+/* #endregion exp_card7 */
+
+/* #endregion main > bottom_information */
+
+/* #endregion main */
+
+/* #region footer */
+
+/* ==================푸터=================== */
+#footer {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #d9dbe1;
+  }
+  #footer > div{
+    width: 1460px;
+    margin: 0 auto;
+  }
+  
+  /* ================푸터(상단)================ */
+  #footerTop{
+    width: 100%;
+    margin-top: 30px; padding: 30px 0px;
+    border-bottom: 1px solid rgb(219, 219, 219) ;
+  }
+  #footerTop { display: flex; justify-content: space-between;}
+  
+  #footerTop ul{ text-align: left; width: 25%;}
+  #footerTop li{ margin-bottom: 20px;}
+  #footerTop a{color : rgb(92, 92, 92);}
+  #footerTop li:hover a{ text-decoration: underline;}
+  
+  /* ================푸터(하단)================ */
+  #footerbottom{ width: 100%;}
+  
+  /* =============푸터(하단-위)================ */
+  #ftbottomUp{
+    width: 100%;
+    margin: 25px 0px;
+    display: flex; justify-content: space-between;
+  }
+  #footerLeft{ display: flex; justify-content: center; align-items: center;}
+  #ftLeftimg{ margin-right: 30px;}
+  #ftRightimg img{ margin-right: 10px;}
+  
+  #ftLeftimg img{ 
+    display: inline; height: 45px;
+    padding: 5px; 
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  #ftRightimg img{ 
+    display: inline; height: 40px;
+    padding: 2px; 
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  #ftLeftimg img:active{ border: 1px solid #0c5aeb; border-radius: 5px;}
+  #ftRightimg img:hover{ border: 1px solid #0c5aeb; border-radius: 100%;}
+  
+  #footerRight img{ height: 45px; padding-top: 10px;}
+  
+  /* =============푸터(하단-아래)=============== */
+  #ftbottomDown{
+    width: 100%;
+    margin-top: 35px; margin-bottom: 8px;
+    display: flex; justify-content: space-between;
+  }
+  #ftbottomDownmain{ width: 55%;} 
+  
+  #ftBottomcontent{ 
+    font-size: 14px;
+    display: flex; flex-wrap: wrap;
+    vertical-align: center;
+  }
+  #ftBottomcontent div{ 
+    padding-right: 5px;
+  }
+  #ftBottomcontent h4{ display: inline;}
+  #ftBottomcontent span{ 
+    font-size:12px; color: #dbdbdb;
+    padding-right: 5px;
+  }
+  #footerYear{ 
+    font-size: 10px; color: #555555;
+    margin: 12px 0px;
+  }
+  
+  #ftBottomimg{ 
+    width: 16%; 
+    margin-right: 5px;
+    display: flex; justify-content: center; align-items: flex-start;
+  }
+  #ftBottomimg a{ display: block;}
+  #ftBottomimg img{ 
+    margin: 5px;
+    border: 1px solid white; border-radius: 5px;
+  }
+  #ftBottomimg img:hover{ border: 1px solid #0c5aeb; border-radius: 5px;}
+  
+  /* ==================팝업================== */
+  #popup{ 
+    position: fixed;
+    bottom: 18px; right: 40px;
+  }
+  #popup a{ display: inline;}
+  #popup img{
+    width: 65px; height: 65px;
+    padding: 14px;
+    margin-top: 10px;
+    display: block; 
+    border: 1px solid #dadce2;
+    border-radius: 100%;
+  }
+  #popupClose img{ padding: 20px;}

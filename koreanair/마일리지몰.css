@@ -25,13 +25,11 @@ body {
 #header {
   width: 100%;
   border-bottom: 1px solid #d9dbe1;
-  margin: 10px 0px;
 }
 #header > div{ 
   width: 1460px;
   margin: 0 auto;
 }
-
 /* ==============헤더(상단)=============== */
 
 #headerTop {
@@ -39,7 +37,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0px 20px;
+  padding: 10px 20px;
 }
 
 #headerTop ul {
@@ -131,7 +129,7 @@ body {
 #headerBox {
   display: none;
   position: absolute;
-  top: 110px;
+  top: 120px;
   left: 0px;
   background-color: white;
   width: 100%;
@@ -594,7 +592,8 @@ a {
 
 #mg_main1>h1 {
   font-weight: 400;
-  font-size: 41px
+  font-size: 41px;
+  margin-top: 50px;
 }
 
 .main2_item {
