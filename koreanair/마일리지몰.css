@@ -25,6 +25,7 @@ body {
 #header {
   width: 100%;
   border-bottom: 1px solid #d9dbe1;
+  margin: 10px 0px;
 }
 #header > div{ 
   width: 1460px;
@@ -39,7 +40,6 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 0px 20px;
-  margin: 10px 0px;
 }
 
 #headerTop ul {
@@ -131,7 +131,7 @@ body {
 #headerBox {
   display: none;
   position: absolute;
-  top: 120px;
+  top: 110px;
   left: 0px;
   background-color: white;
   width: 100%;
