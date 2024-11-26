@@ -320,3 +320,195 @@ body{ font-family: "Noto Sans KR";}
   border-radius: 100%;
 }
 #popupClose img{ padding: 20px;}
+
+
+
+
+*{  
+    padding : 0px; margin : 0px;
+    font-family: "Noto Sans KR";
+    /**/
+   
+   
+}
+a{ color: black; text-decoration: none;}
+li{ list-style-type: none;}
+
+
+#membe_main{
+    width: 1200px;
+    margin: 0px auto;
+
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    
+}
+
+#membe_main1>h1{
+    font-weight:400;
+    font-size:41px;
+    margin-bottom: 42px;
+    margin-top: 70px;
+}
+.membe_box_img{
+    width: 480px;
+    height: 270px;
+}
+.membe_box1_flex:hover{
+    box-shadow: #555555;
+}
+.membe_box1_flex{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    height: 342px;
+    padding : 40px 48px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    
+}
+.membe_box_btn:hover{
+  border: 1px double #0040b6;
+}
+.membe_box_btn{
+    width: 174px;
+    height: 48px;
+    background-color: #00256C;
+    border-radius: 30px;
+    color:white;
+    font-size:16px;
+    font-weight:1000;
+    margin-top: 50px;
+    border: none;
+}
+.membe_box1_title{
+    font-size:28px;
+    margin-bottom: 5px;
+}
+.membe_box1_detail{
+    font-size:16px;
+    color: #555555;
+}
+
+/* 메인 박스 밑 본문 */
+
+.membe_main_box{
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 584px;
+    height: 145px;
+    
+}
+.membe_main_box:hover { border: 1px solid #00256C;}
+.membe_main_box_plus{
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 584px;
+    height: 145px;
+
+}
+.membe_main_box_plus:hover { border: 1px solid #00256C;}
+.membe_main_box1>li{
+    align-content: center;
+}
+.membe_box1{width: 350px;
+
+}
+.membe_main_box1{
+    display: flex;
+    margin: 25px;
+    
+
+}
+.membe_main_box2{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    
+}
+
+.membe_main_box3{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    
+
+}
+.membe_main_box_flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    gap: 25px;
+
+
+}
+.membe_main_title{
+    margin-bottom: 23.5px;
+    font-size: 35.9px;
+    font-weight: 400;
+}
+.membe_main_box1_title{
+    font-size:21px;
+    margin-bottom: 10px;
+
+}
+.membe_main_box1_detail{
+    color: #555555;
+
+    
+}
+.detailbtn{
+    font-size: 18px;
+    font-weight: 1000;
+    width: 3px;
+    margin-right: 15px;
+}
+#membe_main3{
+    margin-bottom: 80px;
+}
+/*그라데이션 바*/
+#membe_main7{
+  
+    background: linear-gradient(to bottom, #add3ef, #e3f0fa);
+    display: flex;
+    justify-content: space-evenly;
+    height: 282px;
+    text-align: center;
+    align-items: center;
+    margin: 0px auto;
+    margin-bottom: 80px;
+    
+}
+
+.membe_8_btn{
+    width: 183px;
+    height: 48px;
+    background-color:unset;
+    border: 3px solid #00256C;
+    border-radius: 30px;
+    color:#00256C;
+    font-size:16px;
+    font-weight:1000;
+    margin-top: 10px;
+}
+.membe_8_btn:hover {
+    border : 4px double  #00256C  ; 
+
+  }
