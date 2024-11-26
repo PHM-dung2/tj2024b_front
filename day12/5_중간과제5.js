@@ -12,16 +12,21 @@ let movieNames = [ '히든페이스' , '위키드' , '글래디에이터2' , '�
 let movieRating = [ 8 , 4 , 7 , 6 ]
 let order = movieNames.length
 let star = ''
+let input = ''
 
+input += '<h1> 문제1 </h1> <table>'
 for( i=0 ; i<order ; i++ ){
+    input += '<tr>';
     for( j=1 ; j<=10 ; j++){
-        if( j<=Number( movieRating[i] ) ){ star +='★';}
-        if( j>Number( movieRating[i] ) ){ star +='☆';}
+        if( j <= Number( movieRating[i] ) ){ star += '★';}
+        if( j > Number( movieRating[i] ) ){ star += '☆';}
     }   // for2 end
-        let input = `<p>${movieNames[i]} ${star}</p> <br/>`;
-        document.write( input );
-        star = ''
+    input += `<td>${movieNames[i]}</td> <td>${star}</td>`;
+    input += '</tr>';
+    star = '' ;
 }   // for1 end
+input += '</table>'
+document.write( input );
 
 /*
 
@@ -41,8 +46,8 @@ for( i=0 ; i<order ; i++ ){
 // let inputHTML = ''
 
 // for( i=0 ; i<seatArray.length ; i++){
-//     if( seatArray[i] = '빈좌석'){ color = 'blue';}
-//     if( seatArray[i] = '예약석'){ color = 'red';}
+//     if( seatArray[i] == '빈좌석'){ color = 'blue';}
+//     if( seatArray[i] == '예약석'){ color = 'red';}
 //     inputHTML = `<span style="color: ${color}">${seatArray[i]}</span>`;
 //     if( i%2=1 ){ inputHTML = `</br>` }
 //     document.write( inputHTML );
