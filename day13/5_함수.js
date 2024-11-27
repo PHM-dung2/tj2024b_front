@@ -21,7 +21,7 @@ function 등록함수(){ // m start
     // 1. html input 마크업을 (객체)js로 가져오기
     let input = document.querySelector('.nameInput')
 
-    // 2. input(객체) 에서 입력도니 value 호출하기
+    // 2. input(객체) 에서 입력된 value 호출하기
     let data = input.value;
     console.log( data );
 
