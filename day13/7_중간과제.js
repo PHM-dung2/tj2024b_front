@@ -5,9 +5,29 @@
 // [제출]
 // 강의 카카오톡방에 ip 링크 제출
 
-let idArray = []
-let pwArray = []
+let inputArray = []
+let loginArray = []
 
 function inputFunc(){
     let id = document.querySelector('.id')
+    let pw = document.querySelector('.pw')
+    let input1 = id.value;
+    let input2 = pw.value;
+    inputArray.push( `['${input1}' , '${input2}']` )
+    console.log( inputArray )
 }
+
+function outputFunc(){
+    
+    let idLogin = document.querySelector('.idLogin')
+    let pwLogin = document.querySelector('.pwLogin')
+    let inputLogin1 = idLogin.value;
+    let inputLogin2 = pwLogin.value;
+    loginArray.push( `['${inputLogin1}' , '${inputLogin2}']` )
+    for( let i = 0 ; i < loginArray.length ; i++ ){
+        let loginTest = inputArray.indexOf(loginArray[i])
+        if( loginTest == -1 ){ document.querySelector('.test').innerHTML = '로그인실패' }
+        else{ document.querySelector('.test').innerHTML = '로그인성공' }
+        console.log(loginArray[i])
+    } // for end
+} // f end

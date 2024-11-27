@@ -4,19 +4,33 @@
 </head>
 <body>
     
-    <div>
-        <h1> 회원가입 </h1>
-        <input class="id" type="text" />
-        <input class="passwords" type="password" />
-        <button onclick="">가입</button>
-    </div>
+    <h3> 회원가입 </h3>
+    <table>
+        <tr>
+            <td>ID : </td>
+            <td><input class="id" type="text" /></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Passwords : </td>
+            <td><input class="pw" type="password" /></td>
+            <td><button onclick="inputFunc()">가입</button></td>
+        </tr>
+    </table>
 
-    <div>
-        <h1> 로그인 </h1>
-        <input class="idLogin" type="text" />
-        <input class="passwordsLogin" type="password" />
-        <button onclick="">로그인</button>
-    </div>
+    <h3> 로그인 </h3>
+    <table>
+        <tr>
+            <td>ID : </td>
+            <td><input class="idLogin" type="text" /></td>
+            <td class="test"></td>
+        </tr>
+        <tr>
+            <td>Passwords : </td>
+            <td><input class="pwLogin" type="password" /></td>
+            <td><button onclick="outputFunc()">로그인</button></td>
+        </tr>
+    </table>
 
     <script src='7_중간과제.js'></script>
 </body>
