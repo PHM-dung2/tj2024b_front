@@ -187,8 +187,8 @@ document.write( importHTML )
 //          ex) 유재석(반장) , 강호동
 //          HTML의 <ol> 에 표시하시오.
 // (1) 입력/저장
-let Name1 = prompt('[지문10] 이름1')
-let Name2 = prompt('[지문10] 이름2')
+// let Name1 = prompt('[지문10] 이름1')
+// let Name2 = prompt('[지문10] 이름2')
 // (2) 연산
 // let Check1 = Name1 == "유재석" ? Name1 + '(방장)' : Name1 ;
 // let Check2 = Name2 == "유재석" ? Name2 + '(방장)' : Name2 ;
