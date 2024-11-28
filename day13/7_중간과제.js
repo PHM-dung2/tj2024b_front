@@ -26,8 +26,8 @@ function outputFunc(){
     loginArray.push( `['${inputLogin1}' , '${inputLogin2}']` )
     for( let i = 0 ; i < loginArray.length ; i++ ){
         let loginTest = inputArray.indexOf(loginArray[i])
-        if( loginTest == -1 ){ document.querySelector('.test').innerHTML = '로그인실패' }
-        else{ document.querySelector('.test').innerHTML = '로그인성공' }
+        if( loginTest == -1 ){ document.querySelector('.test').innerHTML = '로그인실패' ; alert( '로그인실패' )}
+        else{ document.querySelector('.test').innerHTML = '로그인성공' ; alert( '로그인성공' )}
         console.log(loginArray[i])
     } // for end
 } // f end
