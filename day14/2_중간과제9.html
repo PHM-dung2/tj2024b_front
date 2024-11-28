@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <table border="1" style="width: 50%;">
+        <tr style="height: 80px;">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>12</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <input type="text"/>
+    <input class='' type="text"/>
+    <button onclick="inFunc()" type="button">입차</button>
+    <input class="outNum" type="text"/>
+    <button onclick="outFunc( )" type="button">출차</button>
+
+
+    <script src='2_중간과제9.js'></script>
+</body>
+</html>
+
+<!-- 
+    중간과제9 : 기계식 주차장 시스템 구현
+        [요구사항]
+        1. 주차할 수 있는 총 차량 대수는 20대 입니다.
+        2. 차량번호와 주차 할 위치를 클릭/입력 받아 [입차] 버튼 클릭 한다.
+            단) 해당 위치에 입차된 차량이 존재하면 '입차불가' 안내 출력
+        3. 차량번호 를 입력받아 [출차] 버튼 클릭한다.
+            단) 출차 되는 차량의 위치 와 주차료(금액) 을 안내 출력
+            단) 금액은 1초당 100원 계산 , 단 하루가 지나지 않는 조건
+
+        [개발순서]
+        1. 프론트엔드 html 구성
+        2. JS 메모리 구성( 배열/변수/CSV )
+        3. 함수 구성( 함수명 , 실행조건 , 매개변수 판단 )
+        4. 각 함수별 기능 구현, 코드 작성
+        5. 각 함수별 기능 구형 후 HTML(onclick) 연동
+        6. 테스트
+-->
