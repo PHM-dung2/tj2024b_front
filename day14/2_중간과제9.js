@@ -1,4 +1,28 @@
-let carArray = [ '38마 2837 , 5 , 3000' , '' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'']
+let carArray = [ '' , '' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'']
+let index = Number(document.querySelector('.carWhat'))
+
+function inFunc( index ){ 
+    console.log('입차함수 실행');
+ 
+    let Number = document.querySelector('.carNumber').value;    // console.log(Number);
+    let What = Number(document.querySelector('.carWhat').value);        // console.log(What);
+ 
+    //  carArray = Number;
+    //  carArray = What;
+    let nowDate = new Date();
+    let nowHours = nowDate.getHours();
+    let nowMinutes = nowDate.getMinutes();
+    let nowSeconds = nowDate.getSeconds();
+    let inDay = (3600 * nowHours) + (60 * nowMinutes) + nowSeconds;
+
+    carArray[index+1] = `${Number},${What},${inDay}`;
+    console.log(carArray);
+
+
+    //  carArray.push(board);
+     
+ };
+ 
 
 function outFunc( ){
     let carNum = document.querySelector('.outNum')
@@ -24,27 +48,6 @@ function parking( ){
 
 }
 
-function inFunc(){ 
-   console.log('입차함수 실행');
-
-    let Number = document.querySelector('.carNumber').value;    // console.log(Number);
-    let What = document.querySelector('.carWhat').value;        // console.log(What);
-
-    carArray.push(Number);
-    carArray.push(What);
-    let nowDate = new Date();
-    let nowHours = nowDate.getHours();
-    let nowMinutes = nowDate.getMinutes();
-    let nowSeconds = nowDate.getSeconds();
-    
-    let date = `${nowHours}-${nowMinutes}-${nowSeconds}`;
-    console.log(date);
-    let board = `${Number},${What},${date}`;
-    console.log(board);
-    carArray.push(board);
-    
-
-};
 
 
 // function 출력함수(){
