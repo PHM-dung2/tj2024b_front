@@ -14,7 +14,7 @@
         - document.querySelector( ".클래스명" ) : 지정한 class 마크업의 DOM객체를 반환
         - document.querySelector( "#클래스명" ) : 지정한 id 마크업의 DOM객체를 반환
         - D(document) O(Object) M(Model) 객체 : HTML 마크업들을 객체 처럼 사용할 수 있는 모델
-            기능제공
+            DOM객체 기능제공
             .value : 마크업의 value 속성값을 호출   , value 갖는 마크업 : <input> , <select> , <textarea>
             .innerHTML : 마크업 사에에 있는 값을 호출/대입 , <input /> <img /> <br/> 등 을 제외 모두 가능 . 주로 <div> <span> <table>
 
