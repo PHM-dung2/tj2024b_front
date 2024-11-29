@@ -12,9 +12,9 @@ function inFunc( ){
     let i = parseInt(carNum);
     console.log(i);
     let nowDate = new Date();
-    let nowHours = Number(nowDate.getHours());
-    let nowMinutes = Number(nowDate.getMinutes())
-    let nowSeconds = Number(nowDate.getSeconds())
+    let nowHours = parseInt(nowDate.getHours());
+    let nowMinutes = parseInt(nowDate.getMinutes())
+    let nowSeconds = parseInt(nowDate.getSeconds())
     let inDay = (3600 * nowHours) + (60 * nowMinutes) + nowSeconds;
 
     let board = carArray[i-1]
@@ -26,13 +26,13 @@ function inFunc( ){
     console.log(carArray);
     
     let html =''
-    for( j = 1; j <= 20 ; j++){
+    for( let j = 1; j <= 20 ; j++){
         let board = carArray[j-1]
         let carBoard = board.split(',')  
         if( j%5 == 1 ){ html += `<tr>` }
 
-        if( carArray[j-1] != '' ){ html += `<td>${carBoard[0]}</td>`;}
-        else if( i == j ){ html += `<td>${carBoard[0]}</td>`;}
+        if( i == j ){ html += `<td>${carBoard[0]}</td>`;}
+        else if( carArray[j-1] != '' ){ html += `<td>${carBoard[0]}</td>`;}
         else{ html += `<td>${j}</td>` }
 
         if( j%5 == 0 ){ html += `</tr>` }
@@ -48,24 +48,23 @@ function outFunc( ){
     let outNum = document.querySelector('.outNum').value;
     console.log(outNum)
     let i = '';
-    for( j = 0 ; j < 20 ; j++){
+    for( let j = 1 ; j <= 20 ; j++){
         let board = carArray[j-1];
-        let inCar = (board||'').split(',');
-        if( inCar = false){ continue; }
-        if( inCar[0] == outNum ){ i = incar[1];}
+        let inCar = board.split(',');
+        if( inCar[0] == outNum ){ i = inCar[1];}
     }
     
     parkFunc( i ); 
-    carArray[i-1] ='';
+    carArray[i-1] = ' '; // 주차정보 제거 => ''  공백도 안주면 null로 인식/ split 오류 생김
 
     let html ='';
-    for( j = 1; j <= 20 ; j++){
+    for( let j = 1; j <= 20 ; j++){
         let board = carArray[j-1];
         let carBoard = board.split(','); 
         if( j%5 == 1 ){ html += `<tr>`;}
 
-        if( carArray[j-1] != '' ){ html += `<td>${carBoard[0]}</td>`;}
-        else if( i == j ){ html += `<td>${carBoard[0]}</td>`;}
+        if( i == j ){ html += `<td>${j}</td>`;}
+        else if( carArray[j-1] != '' ){ html += `<td>${carBoard[0]}</td>`;}
         else{ html += `<td>${j}</td>`;}
 
         if( j%5 == 0 ){ html += `</tr>`;}
@@ -78,14 +77,14 @@ function outFunc( ){
 
 function parkFunc( i ){
     let nowDate = new Date();
-    let nowHours = Number(nowDate.getHours());
-    let nowMinutes = Number(nowDate.getMinutes());
-    let nowSeconds = Number(nowDate.getSeconds());
-    console.log(nowSeconds)
-    let inDay = (3600 * nowHours) + (60 * nowMinutes) + nowSeconds;
+    let nowHours = parseInt(nowDate.getHours());
+    let nowMinutes = parseInt(nowDate.getMinutes());
+    let nowSeconds = parseInt(nowDate.getSeconds());
+    let inDay = (3600 * nowHours) + (60 * nowMinutes) + (nowSeconds);
     let board = carArray[i-1];
-    let inCar = (board||'').split(",");
+    let inCar = board.split(",");
     let price = (inDay - inCar[2])*100;
+    console.log(carArray[i-1])
     console.log( price );
 
     alert(`${inCar[0]}(위치 : ${inCar[1]}) 주차요금은 ${price} 입니다.`)
