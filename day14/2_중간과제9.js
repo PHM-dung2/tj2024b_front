@@ -1,7 +1,6 @@
 let carArray = [ '' , '' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'' ,'']
 // T : 데이터 샘플 필요함(다른 함수 완료될 때까지 기다릴 시간 없음)
 
-
 function inFunc( ){ 
     // console.log('입차함수 실행');
  
@@ -19,65 +18,66 @@ function inFunc( ){
     let inDay = (3600 * nowHours) + (60 * nowMinutes) + nowSeconds;
 
     let board = carArray[i-1]
-    let carBoard = board.split(',')
+    let inCar = board.split(',')
 
-    if( carBoard[1] == i){ alert('입차불가'); }
+    if( inCar[1] == i){ alert('입차불가'); }      
     else( carArray[i-1] = `${Number},${carNum},${inDay}` )
-       
+    
     console.log(carArray);
+    
+    let html =''
+    for( j = 1; j <= 20 ; j++){
+        let board = carArray[j-1]
+        let carBoard = board.split(',')  
+        if( j%5 == 1 ){ html += `<tr>` }
+
+        if( carArray[j-1] != '' ){ html += `<td>${carBoard[0]}</td>`;}
+        else if( i == j ){ html += `<td>${carBoard[0]}</td>`;}
+        else{ html += `<td>${j}</td>` }
+
+        if( j%5 == 0 ){ html += `</tr>` }
+    } // for end
+    document.querySelector('.carPosition').innerHTML = html
+    document.querySelector('.outBox').innerHTML = `<button type="button" onclick="outFunc( ${i} )">출차</button>`
+        // Uncaught ReferenceError: i is not defined => `` 안에 변수 지정할 때 ${}로 불러오기 꼭!
+    console.log( '현재주차명단' )
+    console.log( carArray )
+
+};
+function outFunc( i ){
+    let outNum = document.querySelector('.outNum').value;
+    let board = carArray[i-1]
+    let inCar = board.split(',')
+    if( inCar[0] == outNum ){ parkFunc( i ); carArray[i-1] =`${i}`}
 
     let html =''
-    for( j = 0; j < 20 ; j++){
-        if( (j+1)%5 == 1 ){ html += `<tr>` }
-        if( i == j+1 ){ html += `<td>${Number}</td>` }
-        else{ html += `<td>${j+1}</td>` }
-        if( (j+1)%5 == 0 ){ html += `</tr>` }
+    for( j = 1; j <= 20 ; j++){
+        let board = carArray[j-1]
+        let carBoard = board.split(',')  
+        if( j%5 == 1 ){ html += `<tr>` }
+
+        if( carArray[j-1] != '' ){ html += `<td>${carBoard[0]}</td>`;}
+        else if( i == j ){ html += `<td>${carBoard[0]}</td>`;}
+        else{ html += `<td>${j}</td>` }
+
+        if( j%5 == 0 ){ html += `</tr>` }
     } // for end
     document.querySelector('.carPosition').innerHTML = html
 
-
-    //  carArray.push(board);
-     
- };
- 
-
-function outFunc( ){
-    let carNum = document.querySelector('.outNum').value;
-    let i = carArray.indexOf( carNum );
-    console.log(i);
-    // let board = carArray() 
+    console.log( '현재주차명단' )
+    console.log( carArray )
 }
+function parkFunc( i ){
+    let nowDate = new Date();
+    let nowHours = Number(nowDate.getHours());
+    let nowminutes = Number(nowDate.getMinutes());
+    let nowSeconds = Number(nowDate.getSeconds());
+    let inDay = (3600 * nowHours) + (60 * nowminutes) + nowSeconds;
+    let board = carArray[i-1];
+    let inCar = board.split(",");
+    let price = (inDay - inCar[2])*100;
+    console.log( price );
 
-
-
-
-// function parking( ){
-//     let nowDate = new Date();
-//     let nowHours = Number(nowDate.getHours());
-//     let nowminutes = Number(nowDate.getMinutes());
-//     let nowSeconds = Number(nowDate.getSeconds());
-//     let inDay = (3600 * nowHours) + (60 * nowminutes) + nowSeconds;
-//     let board = carArray[0];
-//     let inCar = board.split(",");
-//     let price = (inDay - inCar[2])*100;
-//     console.log( price );
-//     alert( `${inCar[0]} 주차요금은 ${price}원입니다.`);
-
-// }
-
-
-
-// function 출력함수(){
-
-//    let tbody = document.querytSelector( 'table > tbody' )
-//     let html = '';
-//     //for( let index = 0 ; index <= carArray.length - 1 ; index++ ){
-//         let hicar = carArray[index];
-//         //if(carArray.length -1 != index){ alert('입차 성공')}
-//         //if else(carArray.length -1 === index){ alert('입차 불가') };
-//         html += `<tr> 
-//                     <td>${index}</td>
-//                 </tr>`
-//     };
-//     parking();
-// };
+    alert(`${inCar[0]}(위치 : ${inCar[1]}) 주차요금은 ${price} 입니다.`)
+    
+}
