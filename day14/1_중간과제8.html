@@ -9,7 +9,7 @@
         <form>
             제목 : <input class="postTitle" type="text" /></br>
             내용 : <textarea class="postContent" cols="22" rows="5"></textarea></br>
-            비밀번호 : <input class="postPassword" type="" /></br>
+            비밀번호 : <input class="postPassword" type="password" /></br>
             <button onclick="postWriteFunc()" type="button">등록</button>
         </form>
     </div>
@@ -21,7 +21,7 @@
                 <th>작성일</th><th>제목</th><th>조회수</th>
             </thead>
             <tbody>
-                <tr><td">2024-11-25</td> <td>첫번째 게시물 제목</td> <td>3</td></tr>
+                <tr><td>2024-11-25</td> <td>첫번째 게시물 제목</td> <td>3</td></tr>
                 <tr><td>2024-11-26</td> <td>두번째 게시물 제목</td> <td>2</td></tr>
                 <tr><td>2024-11-27</td> <td>세번째 게시물 제목</td> <td>0</td></tr>
             </tbody>
@@ -33,11 +33,9 @@
         내용 : <span class="contentBox"> 게시물 내용이 들어갈 자리</span></br>
         작성일/조회수 : <span class="dayBox">2024-11-28</span> / <span class="viewBox">3</span></br>
         <div class="btnBox">
-            
+            <button type="button">삭제</button>
+            <button type="button">수정</button>
         </div>
-    </div>
-    <div>
-        <h1></h1>
     </div>
 
     <script src='1_중간과제8.js'></script>
