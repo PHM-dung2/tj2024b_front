@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+    <link rel="stylesheet" href="2_중간과제9.css" />
 </head>
 <body>
-    
-    <table class="carPosition" border="1"">
+    <h1>기계식주차장</h1><hr/>
+    <table class="carPosition" border="1">
         <tr>
             <td>1</td>
             <td>2</td>
@@ -35,11 +35,16 @@
             <td>20</td>
         </tr>
     </table>
-    <input class='carNumber' type="text"/>
-    <input class='carNum' type="text"/>
+    <hr/>
+    <h3>입차</h3><hr/>
+    차량번호 : <input class='carNumber' type="text"/>
+    위치 : <input class='carNum' type="text"/>
     <button onclick="inFunc( )" type="button">입차</button>
-    <input class="outNum" type="text"/>
+    <hr/>
+    <br/><h3>출차</h3><hr/>
+    차량번호 : <input class="outNum" type="text"/>
     <button onclick="outFunc( )" type="button">출차</button>
+    <hr/>
 
 
     <script src='2_중간과제9.js'></script>

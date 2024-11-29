@@ -30,7 +30,6 @@ function inFunc( ){
         if( i == j+1 ){ html += `<td>${Number}</td>` }
         else{ html += `<td>${j+1}</td>` }
         if( (j+1)%5 == 0 ){ html += `</tr>` }
-
     } // for end
     document.querySelector('.carPosition').innerHTML = html
 

@@ -1,0 +1,7 @@
+table{
+    width: 700px;
+    height: 550px;
+    text-align: center;
+    table-layout: fixed;
+    word-break: break-all;
+}
