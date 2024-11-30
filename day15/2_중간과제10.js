@@ -5,8 +5,20 @@ function inputFunc1(){
     let pName = document.querySelector('.pName').value;
     let pBirth = document.querySelector('.pBirth').value;
     
-    personArray.push( `${personArray.length+1},${pName},${pBirth}` );
+    let searchPerson = false;
+    for( let i=0 ; i<personArray.length ; i++ ){
+        let pBoard = personArray[i];
+        let pNum = pBoard.split(",");
+        if( pNum[1] == pName && pNum[2] == pBirth ){ 
+            searchPerson = true; 
+            alert('등록된 사원입니다.');
+            break; 
+        } // if end
+    } // for end
     
+    if( searchPerson == false ){ 
+        personArray.push( `${personArray.length+1},${pName},${pBirth}` ) }
+
     console.log(personArray);
    
 } // f end
