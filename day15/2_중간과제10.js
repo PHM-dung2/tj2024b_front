@@ -1,4 +1,4 @@
-let personArray = [ '1,유재석,111111','2,강호동,222222' ]
+let personArray = [ '1,유재석,111111','2,강호동,222222','3,신동엽,333333' ]
 let scoreArray = [ '1,90,95,2024','1,80,85,2023','2,70,50,2024']
 
 function inputFunc1(){
@@ -29,15 +29,19 @@ function inputFunc2(){
         let sBoard = scoreArray[i]
         let sNum = sBoard.split(",");
 
-        if( sNum[0] == pId ){ 
-            scoreArray.splice( i+1 , 0 , `${pId},${upScore},${downScore},${pYear}` );
+        if( sNum[0] == pId+1 ){ 
+            if( sNum[0] == pId ){ 
+                scoreArray.splice( i+1 , 0 , `${pId},${upScore},${downScore},${pYear}` );
+                searchId = true;
+                break;
+            }else{ scoreArray.splice( i , 0 , `${pId},${upScore},${downScore},${pYear}` );
             searchId = true;
-            break;
-        }
+            break;}
+        }else if( pId == '' ){ searchId = true; continue; }
     
     } // for1 end
     
-    if( searchId == false){
+    if( searchId == false ){
         scoreArray.push(`${pId},${upScore},${downScore},${pYear}`);
     }
     
@@ -45,7 +49,7 @@ function inputFunc2(){
     
 } // f end
 
-function printFunc2(){
+function printFunc(){
     let html = '';
     for( let i = 0 ; i < personArray.length ; i++){
         let pBoard = personArray[i];
