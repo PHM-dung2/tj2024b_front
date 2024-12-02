@@ -29,19 +29,23 @@ function inputFunc2(){
     let downScore = document.querySelector('.downScore').value;
     let pYear = document.querySelector('.pYear').value;
 
-    let pId = '';
+    let pId = 'a';
+    let searchPerson = false;
+    let searchId = false;
     for(let j=0 ; j < personArray.length ; j++){
         let pBoard = personArray[j];
         let pNum = pBoard.split(",");
-        if(pNum[1] == pName && pNum[2] == pBirth){pId = pNum[0];}
-    } // for2 end
+        if( pNum[1] == pName && pNum[2] == pBirth ){pId = pNum[0]; searchPerson = true; }   
+    } // for end
+    
+    // // 유효성검사
+    if( searchPerson == false ){ alert('사원을 등록해 주십시오.'); searchId = true; }
 
-    let searchId = false;
     for(let i=0 ; i < scoreArray.length ; i++){
         let sBoard = scoreArray[i]
         let sNum = sBoard.split(",");
-
-        if( sNum[0] == pId+1 ){ 
+        
+        if( sNum[0] > pId ){ 
             if( sNum[0] == pId ){ 
                 scoreArray.splice( i+1 , 0 , `${pId},${upScore},${downScore},${pYear}` );
                 searchId = true;
@@ -49,10 +53,10 @@ function inputFunc2(){
             }else{ scoreArray.splice( i , 0 , `${pId},${upScore},${downScore},${pYear}` );
             searchId = true;
             break;}
-        }else if( pId == '' ){ searchId = true; continue; }
-    
-    } // for1 end
-    
+        }else if( pId == ' ' ){ continue; }
+        
+    } // for end
+
     if( searchId == false ){
         scoreArray.push(`${pId},${upScore},${downScore},${pYear}`);
     }
@@ -104,3 +108,32 @@ function printFunc(){
     document.querySelector('.personTable').innerHTML = html;
     
 } // f end
+
+// let pId = '';
+// for(let j=0 ; j < personArray.length ; j++){
+//     let pBoard = personArray[j];
+//     let pNum = pBoard.split(",");
+//     if(pNum[1] == pName && pNum[2] == pBirth){pId = pNum[0];}
+// } // for2 end
+
+// let searchId = false;
+// for(let i=0 ; i < scoreArray.length ; i++){
+//     let sBoard = scoreArray[i]
+//     let sNum = sBoard.split(",");
+
+//     if( sNum[0] >= pId+1 ){ 
+//         if( sNum[0] == pId ){ 
+//             scoreArray.splice( i+1 , 0 , `${pId},${upScore},${downScore},${pYear}` );
+//             searchId = true;
+//             break;
+//         }else{ scoreArray.splice( i , 0 , `${pId},${upScore},${downScore},${pYear}` );
+//         searchId = true;
+//         break;}
+//     }else if( pId == '' ){ searchId = true; continue; }
+//     else{ alert('사원을 등록해 주십시오.'); }
+
+// } // for1 end
+
+// if( searchId == false ){
+//     scoreArray.push(`${pId},${upScore},${downScore},${pYear}`);
+// }
