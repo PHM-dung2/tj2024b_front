@@ -58,6 +58,8 @@
 // [1] 게시물들을 관리할 배열 선언 , 3개 정도 샘플 데이터 초기화 , 전역변수o(JS가 실행될때 1번 선언) vs 지역변수:{}가 실행될떄마다 선언
 let postArray = [];
 // let arr = postArray.split(",");
+let view = 0 ;  // 조회수 , 일반적으로 게시물 등록시 게시물 조회수는 0부터 시작
+// console.log(view);
 
 // [2] 등록함수 , 실행조건 : [등록]버튼 클릭시
 function postWriteFunc(){   //console.log('등록함수 실행')    // 키워드명 겹칠때 오류 조심(변수명 이름 바꿔보기)
@@ -79,8 +81,6 @@ function postWriteFunc(){   //console.log('등록함수 실행')    // 키워드
     let nowDay = nowDate.getDate() 
     let date = `${nowYear}-${nowMonth}-${nowDay}` ;  // 작성일 , 일반적으로 게시물 등록시 현재 시스템 날짜를 사용.
     // console.log(date);
-    let view = 0 ;  // 조회수 , 일반적으로 게시물 등록시 게시물 조회수는 0부터 시작
-    // console.log(view);
         // (2) 5개의 변수들을 하나의(CSV형식)문자열 로 구성
     let board = `${title},${content},${password},${date},${view}`; //`백틱 문자열 템플렛
     console.log(postArray);
@@ -91,6 +91,7 @@ function postWriteFunc(){   //console.log('등록함수 실행')    // 키워드
 
 // [3] 출력함수 , 실행조건 : js열렸을 때 최초 1번 실행 , 등록/삭제/수정 처리 성공시 실행
 postListFunc();
+view++;
 function postListFunc(){  console.log('등록함수 실행')
     // (1) 어디에 , table > tbody , document.querySelector(선택자)
     let tbody = document.querySelector( 'table > tbody' )
