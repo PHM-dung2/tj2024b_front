@@ -144,9 +144,9 @@ function 평가등록출력( 클릭된사원번호 ){ // 매개변수 : 클릭�
 function 평가등록함수( 클릭된사원번호 ){
     console.log( 클릭된사원번호 );
     let eno = 클릭된사원번호;
-    let year = document.querySelector('.year');
-    let first = document.querySelector('.first');
-    let second = document.querySelector('.second');
+    let year = document.querySelector('.year').value;
+    let first = document.querySelector('.first').value;
+    let second = document.querySelector('.second').value;
     let info = {
         사원번호 : eno,
         평가년도 : year,
@@ -155,20 +155,26 @@ function 평가등록함수( 클릭된사원번호 ){
     };
     평가목록.push( info );
 
-    console.log( 평가목록 )
+    console.log( 평가목록 );
 } // f end
 
 
-function 평가출력함수(){
+function 평가출력함수( 클릭된사원번호 ){
     // 1. 어디에
     let tbody = document.querySelector('.사원출력')
     // 2. 무엇을
-    for( index = 0 ; index <= 사원목록.length-1 ; index++){
-        let info = 사원목록[index];
+    let html = '';
+    for( index = 0 ; index <= 평가목록.length-1 ; index++){
+        let info = 평가목록[index];
         if( info.사원번호 == 클릭된사원번호 ){
-            html += `<tr> <td> ${ info.평가년도 } </td> <td> ${ info.상반기 } </td> <td> ${ info.하반기 } </td> </tr>`;
-        }  
-    }
+        html += `<tr> 
+                    <td> ${ info.평가년도 } </td> 
+                    <td> ${ info.상반기 } </td> 
+                    <td> ${ info.하반기 } </td> 
+                </tr>`;
+            } // if end
+    } //for end
+ 
     // 3. 출력
     tbody.innerHTML = html;
 } // f end
