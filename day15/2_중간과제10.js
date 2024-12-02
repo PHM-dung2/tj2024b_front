@@ -53,7 +53,7 @@ function inputFunc2(){
             }else{ scoreArray.splice( i , 0 , `${pId},${upScore},${downScore},${pYear}` );
             searchId = true;
             break;}
-        }else if( pId == ' ' ){ continue; }
+        }
         
     } // for end
 
