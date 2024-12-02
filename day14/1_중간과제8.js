@@ -91,7 +91,6 @@ function postWriteFunc(){   //console.log('등록함수 실행')    // 키워드
 
 // [3] 출력함수 , 실행조건 : js열렸을 때 최초 1번 실행 , 등록/삭제/수정 처리 성공시 실행
 postListFunc();
-view++;
 function postListFunc(){  console.log('등록함수 실행')
     // (1) 어디에 , table > tbody , document.querySelector(선택자)
     let tbody = document.querySelector( 'table > tbody' )
@@ -122,6 +121,7 @@ function postTitleInput( i ){ // i : 매개변수 , 상세 출력할 배열의
     let board = postArray[i]
     let info = board.split(',');
     // 3. 출력 , innerHTML
+    viewScore =  info[4]++;
     document.querySelector('.tilteBox').innerHTML = info[0];
     document.querySelector('.contentBox').innerHTML = info[1];
     document.querySelector('.dayBox').innerHTML = info[3];
@@ -129,6 +129,7 @@ function postTitleInput( i ){ // i : 매개변수 , 상세 출력할 배열의
     document.querySelector('.btnBox').innerHTML = 
             `<button type="button" onclick="postDeleteFunc(${i})">삭제</button>
             <button type="button" onclick="postEditFunc(${i})">수정</button>`
+    postListFunc();
 }
 
 // [4] 삭제함수 , 실행조건 : [삭제]버튼 클릭시
