@@ -140,10 +140,7 @@ function postDeleteFunc( i ){
     if( input == info[2]){ postArray.splice( i , 1 ) };
     // 2. 화면 새로고침 / 다시 출력 / 다시ㅣ 함수 호출
     postListFunc();
-    document.querySelector('.tilteBox').innerHTML = "";
-    document.querySelector('.contentBox').innerHTML = "";
-    document.querySelector('.dayBox').innerHTML = "";
-    document.querySelector('.viewBox').innerHTML = "";
+    postTitleInput( i );
 } // f end
 
 // [5] 수정함수 , 실행조건 : [수정]버튼 클릭시
