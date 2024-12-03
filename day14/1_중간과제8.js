@@ -58,8 +58,6 @@
 // [1] 게시물들을 관리할 배열 선언 , 3개 정도 샘플 데이터 초기화 , 전역변수o(JS가 실행될때 1번 선언) vs 지역변수:{}가 실행될떄마다 선언
 let postArray = [];
 // let arr = postArray.split(",");
-let view = 0 ;  // 조회수 , 일반적으로 게시물 등록시 게시물 조회수는 0부터 시작
-// console.log(view);
 
 // [2] 등록함수 , 실행조건 : [등록]버튼 클릭시
 function postWriteFunc(){   //console.log('등록함수 실행')    // 키워드명 겹칠때 오류 조심(변수명 이름 바꿔보기)
@@ -68,7 +66,9 @@ function postWriteFunc(){   //console.log('등록함수 실행')    // 키워드
     let title = document.querySelector('.postTitle').value;
     let content = document.querySelector('.postContent').value;
     let password = document.querySelector('.postPassword').value;
-            // 오류 : Cannot red properties of nul (reading 'value')
+    let view = 0 ;  // 조회수 , 일반적으로 게시물 등록시 게시물 조회수는 0부터 시작
+    // console.log(view);
+    // 오류 : Cannot red properties of nul (reading 'value')
             // ---> HTML과 JS에 입력한 선택자가 일치하지 않을 경우 , value속성이 없는 마크업 , 
    
     // 2. 처리 , 입력받은값들과 날짜/조회수 하나의 문자열(CSV)rntjd -> 배열 저장
@@ -112,7 +112,6 @@ function postListFunc(){  console.log('등록함수 실행')
     // (3) 출력 , .innerHTML
     tbody.innerHTML = html;
 } // f end
-
 // [3-1] 상세 출력 함수
 function postTitleInput( i ){ // i : 매개변수 , 상세 출력할 배열의
     console.log('상세출력함수 실행'); console.log( i );
@@ -120,8 +119,11 @@ function postTitleInput( i ){ // i : 매개변수 , 상세 출력할 배열의
     // 2. 무엇을 , 배열 정보를 HTML 로 구성 , 선택한 게시물 인덱스의 정보를 , index
     let board = postArray[i]
     let info = board.split(',');
+    // let view = Number( info[4] )+1;
+    // board[i]= `${info[0]},${info[1]},${info[2]},${info[3]},${view}`
+    // console.log( view );
+    // console.log( postArray );
     // 3. 출력 , innerHTML
-    viewScore =  info[4]++;
     document.querySelector('.tilteBox').innerHTML = info[0];
     document.querySelector('.contentBox').innerHTML = info[1];
     document.querySelector('.dayBox').innerHTML = info[3];
@@ -136,7 +138,7 @@ function postTitleInput( i ){ // i : 매개변수 , 상세 출력할 배열의
 function postDeleteFunc( i ){   
     console.log('삭제함수 실행')
     // 1. 배열내 특정한 인덱스 의 요소 제거 , 배열변수명.splice( 삭제할 인덱스 , 개수 )
-    let board = postArray[i]
+    let board = postArray[i];
     let info = board.split(',');
     let input = prompt('비밀번호 입력');
     if( input == info[2]){ postArray.splice( i , 1 ) };
