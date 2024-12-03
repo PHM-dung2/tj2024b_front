@@ -119,15 +119,16 @@ function postTitleInput( i ){ // i : 매개변수 , 상세 출력할 배열의
     // 2. 무엇을 , 배열 정보를 HTML 로 구성 , 선택한 게시물 인덱스의 정보를 , index
     let board = postArray[i]
     let info = board.split(',');
-    // let view = Number( info[4] )+1;
-    // board[i]= `${info[0]},${info[1]},${info[2]},${info[3]},${view}`
-    // console.log( view );
-    // console.log( postArray );
+    let view = Number(info[4]);
+    view++;
+    postArray[i]= `${info[0]},${info[1]},${info[2]},${info[3]},${view}`
+    console.log( view );
+    console.log( postArray );
     // 3. 출력 , innerHTML
     document.querySelector('.tilteBox').innerHTML = info[0];
     document.querySelector('.contentBox').innerHTML = info[1];
     document.querySelector('.dayBox').innerHTML = info[3];
-    document.querySelector('.viewBox').innerHTML = info[4];
+    document.querySelector('.viewBox').innerHTML = view;
     document.querySelector('.btnBox').innerHTML = 
             `<button type="button" onclick="postDeleteFunc(${i})">삭제</button>
             <button type="button" onclick="postEditFunc(${i})">수정</button>`
