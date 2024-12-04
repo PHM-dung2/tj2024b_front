@@ -6,7 +6,8 @@
 <body>
     <div id="wrap">
         <h2>도서 관리 시스템</h2>
-        <div class="btn">
+        <h4>도서목록</h4>
+        <div class="btn1">
             <input class="book1" type="text" placeholder="도서명"/>  
             <input class="book2" type="text" placeholder="출판사"/>
             <input class="book3" type="text" placeholder="도서위치"/>
@@ -34,19 +35,17 @@
         <br/>
         <br/>
         <br/>
-        <div>
-            <input class="num1" type="text" placeholder="재고량"/>
-            <input class="num2" type="text" placeholder="정가"/>
-            <input class="num3" type="date" placeholder="입고날짜"/>
-            <button onclick="" type="button">재고등록</button>
+        <div class="inputNum">
+            
         </div>
             
         <div>
             <table border="1" class="table">
-                <thead>
+                <thead class="btn2">
                     <tr>
                         <th>도서코드</th>
                         <th>재고량</th>
+                        <th>상태</th>
                         <th>정가</th>
                         <th>입고날짜</th>
                         <th>수정 / 삭제</th>
@@ -56,6 +55,7 @@
                     <tr>
                         <td>1</td>
                         <td>250</td>
+                        <td>입고</td>
                         <td>6,500</td>
                         <td>12/4</td>
                         <td>
