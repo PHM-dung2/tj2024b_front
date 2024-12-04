@@ -1,0 +1,31 @@
+/* 달력 상단 구역 */
+#calTop{
+    display: flex; /* 하위 요소들을 배치 */
+}
+#calTop > h4{
+    margin : 30px 10px;
+}
+#calTop > button{
+    background-color: white;
+    border : none;
+}
+
+
+/* 달력 날짜 표시 구역 */
+#calBottom{
+    display: flex; /* 하위 요소들을 배치 */
+    flex-wrap: wrap; /* 하위 요소들이 자동으로 줄바꿈 */
+}
+#calBottom > div{
+    width: 14%; /* 부모요소의 가로사이즈 100% 의 7등분 */
+    height: 100px;
+    border: 1px solid #eeeeee;
+}
+#calBottom > .week{
+    height: 30px;
+    text-align: center;
+    font-weight: bold; font-size: 20px; 
+}
+#calBottom > .sunday{
+    background-color: red; color : white;
+}

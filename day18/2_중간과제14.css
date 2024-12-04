@@ -1,0 +1,19 @@
+*{
+}
+#wrap{width : 750px;
+    margin: 0 auto;
+}
+    
+
+a{ display: block; }
+
+.table{
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.table > thead{
+    background-color: rgb(255, 255, 169);
+}
