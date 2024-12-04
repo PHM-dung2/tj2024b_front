@@ -177,8 +177,6 @@ function 재고출력함수( 도서코드 ){
         } // if end
     } // for end
     
-    
-    
     for( let index = 0 ; index < 재고기록.length ; index++ ){
         let info = 재고기록[index];
         
