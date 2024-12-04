@@ -1,9 +1,21 @@
-*{
-}
+
+body{ background-color: beige; }
 #wrap{width : 750px;
     margin: 0 auto;
 }
-    
+h2{ text-align: center;}   
+
+.btn1{ display: flex; align-items: center; justify-content: space-between;}
+
+.btn1 > input{
+    width : 23%;
+    height: 20px;
+    background-color: beige;
+}
+.btn1 > button{
+    width : 23%;
+    height: 26px;
+}
 
 a{ display: block; }
 
@@ -16,4 +28,18 @@ a{ display: block; }
 
 .table > thead{
     background-color: rgb(255, 255, 169);
+}
+
+
+h4{ display: block; }
+.btn2 > div{ display: flex; align-items: center; justify-content: space-between;}
+
+.btn2 input{
+    width : 18%;
+    height: 20px;
+    background-color: beige;
+}
+.btn2 button{
+    width : 18%;
+    height: 26px;
 }
