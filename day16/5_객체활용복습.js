@@ -81,10 +81,34 @@ function poutputFunc(){
 }
 // [3] 평가입력함수
 function sinputFunc( 사원번호 ){
-    
+    let html = ``;
+    for( i=0 ; i < scoreArray.length ; i++ ){
+        let info = scoreArray[i];
+        if( info.사원번호 == 사원번호 ){
+            html += `<tr> 
+                        <td> ${ info.평가년도 } </td>
+                        <td> ${ info.상반기 } </td>
+                        <td> ${ info.하반기 } </td>
+                    </tr>`;
+        }
+    document.querySelector('.sTable')
+    } // for end
+
     return;  
 
-}
+} // f end
 // [4] 평가출력함수
-function soutputFunc(){return;   
+function soutputFunc(){
+    let html = ``;
+    for( i=0 ; i < scoreArray.length ; i++ ){
+        let info = scoreArray[i];
+        if( info.사원번호 == 사원번호 ){
+            html += `<tr> 
+                        <td> ${ info.평가년도 } </td>
+                        <td> ${ info.상반기 } </td>
+                        <td> ${ info.하반기 } </td>
+                    </tr>`;
+        }
+    document.querySelector('.sTable')
+    return;   
 }
