@@ -159,27 +159,27 @@ function 재고등록함수( 도서코드 ){
     재고기록.push(info); 
     console.log( 재고기록 )
     
-    재고출력함수( info.도서코드 );
+    재고출력함수( );
 } // f end
 
 재고출력함수( );
-function 재고출력함수( 도서코드 ){
+function 재고출력함수( ){
     // 1. 어디에
     let tbody = document.querySelector('.tbody2')
     // 2. 무엇을
     let html = ``;
 
-    let 현재재고량 = 0;
-    for( let j = 0 ; j < 재고기록.length ; j++){
-        let info = 재고기록[j]
-        if( 도서코드 == j+1){
-            현재재고량 = Number( 현재재고량 ) + Number( info.변화량  );
-        } // if end
-    } // for end
     
+    let 현재재고량 = 0;
     for( let index = 0 ; index < 재고기록.length ; index++ ){
         let info = 재고기록[index];
         
+        for( let j = 0 ; j < 재고기록.length ; j++){
+            let board = 재고기록[j]
+            if( board.도서코드 == j+1){
+                현재재고량 = Number( 현재재고량 ) + Number( info.변화량 );
+            } // if end
+        } // for end
 
         html += `<tr>
                     <td>${ info.도서코드 }</td>
