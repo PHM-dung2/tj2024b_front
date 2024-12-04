@@ -22,9 +22,9 @@
  */
 
 let 독서 = [
-    { 도서코드 : 1 , 도서명 : "비행운" , 출판사 : "민음사" , 위치 : 1 },
-    { 도서코드 : 2 , 도서명 : "천사와 악마" , 출판사 : "문학수첩" , 위치 : 2 },
-    { 도서코드 : 3 , 도서명 : "종이여자" , 출판사 : "문학비행" , 위치 : 3 }
+    { 도서코드 : 1 , 도서명 : "비행운" , 출판사 : "민음사" , 위치 : "a1" },
+    { 도서코드 : 2 , 도서명 : "천사와 악마" , 출판사 : "문학수첩" , 위치 : "a2" },
+    { 도서코드 : 3 , 도서명 : "종이여자" , 출판사 : "문학비행" , 위치 : "b3" }
 ]
 let 재고기록 = [
     { 도서코드 : 1 , 변화량 : 3 , 상태 : "입고" , 정가 : 6500 , 입고날짜 : "2024-12-4" },
@@ -39,6 +39,12 @@ function 등록함수( ){
     let book1 = document.querySelector('.book1').value
     let book2 = document.querySelector('.book2').value
     let book3 = document.querySelector('.book3').value
+
+    // 유효성 검사
+    if (!book1 || !book2 || !book3) {
+        alert("모든 입력값을 채워주세요");
+        return;
+    }
 
     // 객체로 input값 저장
     let info = {
@@ -117,78 +123,68 @@ function 도서재고연결( 도서코드 ){
             <input class="num3" type="text" placeholder="정가"/>
             <input class="num4" type="date" placeholder="입고날짜"/>
             <button onclick="재고등록함수(${ 도서코드 })" type="button">재고등록</button>`
+            
 } // f end
 
-function 재고등록함수( 도서코드 ){
+
+function 재고등록함수( 재고도서코드 ){
     // input 값 가져오기
     let num1 = document.querySelector('.num1').value
     let num2 = document.querySelector('.num2').value
     let num3 = document.querySelector('.num3').value
     let num4 = document.querySelector('.num4').value
    
+    // 유효성 검사
+    if (!num1 || !num2 || !num3 || !num4) {
+        alert("모든 입력값을 채워주세요");
+        return;
+    }
+    
     // 객체로 input값 저장
     let info = {
-        도서코드 : 도서코드 ,
+        도서코드 : 재고도서코드 ,
         변화량 : num1 , 
         상태 : num2 ,
         정가 : num3 ,
         입고날짜 : num4 ,
     }
+    
     // 재고기록 배열에 저장
-    // let search = 'false';
-    // for(let i=0 ; i < 재고기록.length ; i++){
-    //     let Board = 재고기록[i]
-        
-    //     if( Board.도서코드 > 도서코드 ){ 
-    //         if( Board.도서코드 == 도서코드 ){ 
-    //             재고기록.splice( i+1 , 0 , info );
-    //             search = true;
-    //             break;
-    //         }else{ 재고기록.splice( i , 0 , info );
-    //         search = true;
-    //         break;}
-    //     }
-        
-    // } // for end
-
-    // if( search == false ){
-    //     재고기록.push( info );
-    // }
-
-
-    재고기록.push(info); 
+    
+    재고기록.push( info );
     console.log( 재고기록 )
     
-    재고출력함수( );
+    재고기록.sort((a,b) => a.도서코드 - b.도서코드 )
+    console.log( 재고기록 )
+    
+    재고출력함수( 재고도서코드 );
 } // f end
 
 재고출력함수( );
-function 재고출력함수( ){
+function 재고출력함수( 재고도서코드 ){
     // 1. 어디에
     let tbody = document.querySelector('.tbody2')
     // 2. 무엇을
     let html = ``;
-
-    
     let 현재재고량 = 0;
+    
     for( let index = 0 ; index < 재고기록.length ; index++ ){
         let info = 재고기록[index];
-        
-        for( let j = 0 ; j < 재고기록.length ; j++){
-            let board = 재고기록[j]
-            if( board.도서코드 == j+1){
-                현재재고량 = Number( 현재재고량 ) + Number( info.변화량 );
-            } // if end
-        } // for end
+        if(!재고도서코드){ 재고도서코드 = 1;}
+        if( info.도서코드 == Number(재고도서코드) ){ 
+            현재재고량 += Number( info.변화량 ); 
+        }      
+        console.log(현재재고량)
 
         html += `<tr>
                     <td>${ info.도서코드 }</td>
-                    <td>${ info.변화량 } ( 현재재고량 : ${ 현재재고량 } )</td>
+                    <td>${ info.변화량 }</td>
+                    <td>${ 현재재고량 }</td>
                     <td>${ info.상태 }</td>
                     <td>${ info.정가 }</td>
                     <td>${ info.입고날짜 }</td>
                     <td>
-                        <button onclick="수정함수( ${ info.도서코드 } )" type="button">수정</button>
+                        <button onclick=" 재고수정함수( ${ info.도서코드 } )" type="button">수정</button>
                         <button onclick=" dltFunc2(${ index }) " type="button">삭제</button>
                     </td>
                 </tr>`;
@@ -198,13 +194,20 @@ function 재고출력함수( ){
     tbody.innerHTML = html;
 } // f end
 
-function 수정함수( 수정도서코드 ) {
+
+function 재고수정함수( 수정도서코드 ) {
 
     // console.log(독서코드);
  let 재고량 = Number( prompt('변경 재고량을 입력해주세요 : ') );    
  let 상태 = prompt('변경 상태를 입력해주세요 : ');    
  let 정가 = prompt('변경 정가를 입력해주세요 : ');    
  let 입고날짜 = prompt('변경 입고날짜를 입력해주세요 : ');    
+
+// 유효성 검사
+if (!재고량 || !상태 || !정가 || !입고날짜) {
+    alert("모든 입력값을 채워주세요");
+    return;
+}
 
  let info = { 도서코드 : 수정도서코드 , 변화량 : 재고량 , 상태 : 상태 , 정가 : 정가 , 입고날짜 : 입고날짜 }
   
@@ -217,7 +220,7 @@ function 수정함수( 수정도서코드 ) {
  }
 
  
-재고출력함수();
+재고출력함수( );
 }
 
 // 재고 삭제
@@ -225,5 +228,26 @@ function dltFunc2(index){
     console.log(재고기록);
     재고기록.splice(index,1);
 
-    재고출력함수();
+    재고출력함수( );
 };
+
+// let index = '';
+    // for(let i=0 ; i < 재고기록.length ; i++){
+    //     let board = 재고기록[i]
+    //     let search = 'false';
+
+    //     if( board.도서코드 < 도서코드+1 && board.도서코드 > 도서코드-1 && board.도서코드 == 도서코드){ 
+   
+        //     if( board.도서코드 < 도서코드 // if( Board.도서코드 == 도서코드 ){ 
+            //     let index = '';
+            //     for( j=0 ; j < 재고기록.length ; j++ ){
+            //         let Board2 = 재고기록[j]
+            //         if( Board2.도서코드 > 도서코드){ index = j; break;}
+
+            //     } // for2 end
+            //     재고기록.splice( j , 0 , info );
+            //     search = true;
+            //     break;
+            // }else{ 재고기록.splice( i , 0 , info );
+            // search = true;
+            // break;}
