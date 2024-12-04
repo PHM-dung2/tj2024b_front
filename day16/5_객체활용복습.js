@@ -65,24 +65,25 @@ function poutputFunc(){
     let tbody = document.querySelector('.pTable');
     let html = '';
     for( i=0 ; i<personArray.length ; i++){
-        if( personArray.사원번호 == i ){  
-            let info = personArray.[i]
-            html += `<tr> 
-                        <th> ${ info.사원번 } </th> 
-                        <th> ${ info.사원명 } </th> 
-                        <th> ${ info.생년월일 } </th> 
-                        <th> 
-                            <button type="button" onclick="">  </button>
-                            <button type="button" onclick="">  </button>
-                        </th>
-                    </tr> `;
-        }
+        let info = personArray[i]
+        html += `<tr> 
+                    <td> ${ info.사원번호 } </td> 
+                    <td> ${ info.사원명 } </td> 
+                    <td> ${ info.생년월일 } </td> 
+                    <td> 
+                        <button type="button" onclick="sinputFunc(${ info.사원번호 })"> 평가등록 </button>
+                        <button type="button" onclick="soutputFunc(${ info.사원번호 })"> 평가결과 </button>
+                    </td>
+                </tr> `;
     }
     tbody.innerHTML = html;
     return;   
 }
 // [3] 평가입력함수
-function sinputFunc(){return;   
+function sinputFunc( 사원번호 ){
+    
+    return;  
+
 }
 // [4] 평가출력함수
 function soutputFunc(){return;   

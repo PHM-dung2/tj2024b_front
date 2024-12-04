@@ -11,6 +11,15 @@ console.log( new Date( 2023 , 4 , 20 ) ) // Sat May 20 2023 00:00:00 GMT+0900 (�
 let today = new Date();
 let year = today.getFullYear(); // 오늘의 연도
 let month = today.getMonth()+1; // 오늘의 월 , +1 하는 이유 : 12월이 11로 반환이 되기 때문에
+
+// 달력의 일 일정/내용
+let contentArray = [
+    { cno : 1 , content : '학원개강' , date : '2024-12-4' , color : 'red' },
+    { cno : 2 , content : '은행업무' , date : '2024-12-10' , color : 'blue' },
+    { cno : 3 , content : '친구약속' , date : '2024-12-10' , color : 'pink' },
+    { cno : 4 , content : '월급일' , date : '2024-12-15' , color : 'gray' }
+]
+
 // [1] 달력 출력함수
 calPrint()
 function calPrint(){
@@ -46,10 +55,23 @@ function calPrint(){
         for( let blank = 1 ; blank <= startWeek ; blank++ ){
             html2 += `<div></div>`
         }
-        // + 달력의 날짜 출력
+        // + 달력의 날짜 출력 + 현재 일정도 같이 출력
         for( let day = 1 ; day<=endDay ; day++ ){
-            html2 += `<div> ${ day } </div>`;
-        }
+            // 일정 출력
+                // 1. 현재 보고있는 날짜 형식 수어
+            let date3 = `${year}-${month}-${day}` ; // 현재 반복문이 처리중인 날짜
+                // console.log( date3 );
+                // 2. 현재 날짜와 등록된 일정날짜와 동일한 일정 찾기/검색
+            let planHtml = ``; // for 밖에 만든 이유 : 동일한  날짜의 2개 이상의 일정이 있을 수 있으므로
+            for( let index = 0 ; index <= contentArray.length-1 ; index++ ){
+                let plan = contentArray[index];
+                if( plan.date == date3 ){ // 만약에 index번째의 일정객체내 일정이 현재 보고있는 날짜와 같으면
+                    planHtml += `<div style="background-color: ${ plan.color } ;"> ${ plan.content } </div>`;
+                };
+            } // for2 end
+            // 일 출력
+            html2 += `<div> ${ day } ${ planHtml } </div>`;
+        } // for1 end
 
         calBottom.innerHTML = html2;
     return; // 함수가 종료되면서 반환되는 값 , 값이 없을경우 return 생략이 가능
