@@ -1,10 +1,16 @@
 /* *{ border: 1px solid red; } */
-#wrap{
 
+#wrap{
     width: 700px;
     margin: 0 auto;
+    text-align: center;
 }
+
 table{  width: 700px; border-collapse: collapse; }
+th, td{ 
+    height: 30px;
+}
+
 /* 회원가입 */
 #join , #logIn , #writePost , #post{
     display: flex; justify-content: center; 
@@ -13,13 +19,13 @@ table{  width: 700px; border-collapse: collapse; }
     display: flex; width: 700px; 
     justify-content: center;
 }
-#joi th, td{ 
-    justify-content: space-around;
-    height: 30px;
-}
+#join input{ 
+    margin: 5px 20px;
+ }
 
 /* 게시물 작성 */
-#writePost input{ border: none; margin: 10px; }
+#writePost input{ border: none; margin: 10px; width: 640px; }
+.postTable{ margin-bottom: 20px;}
 #writePost textarea{ 
     width: 640px; height: 100px;
     margin: 10px;
@@ -28,10 +34,15 @@ table{  width: 700px; border-collapse: collapse; }
 #writePost input , textarea:focus{
     outline: none;
 }
-.writeTable{}
+.writeTable{ margin : 10px 0px; }
+
 /* 게시판 */
-#post{  height: 350px;}
-.postTable{ }
 
 /* 상세페이지 */
-#postDetail{ display: flex; justify-content: center; height: 350px;}
+#postDetail{ display: flex; justify-content: center;}
+.pdetailTable{ margin-bottom: 30px;}
+#postDetail textarea{ 
+    width: 570px; height: 100px;
+    margin: 10px;
+    border: none;
+}

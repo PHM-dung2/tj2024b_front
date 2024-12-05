@@ -41,11 +41,11 @@ function loginConnect(){
                 <legend><h2>로그인</h2></legend>
                 <table>
                     <tr>
-                        <th>id  </th>
+                        <th>ID</th>
                         <td><input class="id" type="text"></td>
                     </tr>
                     <tr>
-                        <th>password  </th>
+                        <th>PASSWORD</th>
                         <td><input class="password" type="password"></td>
                     </tr>
                     <tr>
@@ -78,6 +78,10 @@ function logInFunc(){
         }
     } // for end
     if( logIn == false ) {alert( '로그인 실패' );}
+    // 로그인 시도 후 초기화
+    document.querySelector('.id').value = '';
+    document.querySelector('.password').value = '';
+
     console.log( logInCode );
     console.log( logIn );
     return;
@@ -96,7 +100,7 @@ function writeFunc(){
 
     let html = `<fieldset>
                     <legend> <h2>게시물 작성</h2> </legend>
-                    <div>작성일 : ${ year }-${ month }-${ date }</div>
+                    <div align="left">작성일 : ${ year }-${ month }-${ date }</div>
                     <table class="writeTable" border="1">
                         <tr>
                             <th>제목</th>
@@ -114,8 +118,8 @@ function writeFunc(){
                 </fieldset>`;
     let writePost = document.querySelector('#writePost');
 
-
     writePost.innerHTML = html;
+
     return;
 } // f end
 
@@ -125,7 +129,7 @@ function inputFunc(){
     let pContent = document.querySelector('.pContent').value;
     let nowDate = new Date();
     let year = nowDate.getFullYear();
-    let month = nowDate.getMonth();
+    let month = nowDate.getMonth()+1;
     let date = nowDate.getDate();
     let view = 0;
     // console.log( pTitle );
@@ -137,7 +141,14 @@ function inputFunc(){
         조회수 : view , 
         내용 : pContent 
     }
+    postArray.push( info );
+    console.log( postArray );
+    outputFunc()
 
+    // 등록 후 페이지 넘어감
+    let writePost = document.querySelector('#writePost');
+    let html = '';
+    writePost.innerHTML = html;
     return;
 } // f end
 
@@ -151,7 +162,7 @@ function outputFunc(){
         let info = postArray[i];
         html += `<tr>
                     <td>${ info.작성일 }</td>
-                    <td><a onclick="pdatailFunc( ${ i } )">${ info.제목 }</a></td>
+                    <td><a onclick="pdetailFunc( ${ i } )">${ info.제목 }</a></td>
                     <td>${ info.조회수 }</td>
                 </tr>`;
     } // for end
@@ -161,28 +172,94 @@ function outputFunc(){
 }
 
 // 상세페이지 연결
-function pdatailFunc( index ){
+function pdetailFunc( index ){
     let info = postArray[index];
+
+    postArray[index].조회수++;
+
     let html = `<fieldset>
-                <legend><h2>상세페이지</h2></legend>
-                <table class="pdetailTable" border="1">
-                    <tr>
-                        <th>제목</th>
-                        <td>${ info.제목 }</td>
+                    <legend><h2>상세페이지</h2></legend>
+                    <table class="pdetailTable" border="1">
+                        <tr>
+                            <th width="120px">제목</th>
+                            <td>${ info.제목 }</td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td><textarea>${ info.내용 }</textarea></td>
+                        </tr>
+                        <tr>
+                        <th>날짜 / 조회수</th>
+                        <td>${ info.작성일 } / ${ info.조회수 }</td>
                     </tr>
-                    <tr>
-                        <th>내용</th>
-                        <td>${ info.내용 }</td>
-                    </tr>
-                </table>
-                <div align="right">
-                    <button onclick="" type="button">수정</button>
-                    <button onclick="" type="button">삭제</button>
+                    </table>`;
+
+    if( info.개인코드 !== logInCode ){ 
+        html += `</fieldset>`;
+    }else{ 
+        html += `<div align="right">
+                    <button onclick="updateFunc( ${ index } )" type="button">수정</button>
+                    <button onclick="deleteFunc( ${ index } )" type="button">삭제</button>
                 </div>
-            </fieldset>`;
+            </fieldset>`; 
+    } // if end
+    
     let postDetail = document.querySelector('#postDetail')
 
     postDetail.innerHTML = html;
+    outputFunc()
+}
 
+function updateFunc( index ){
+    let info = postArray[index];
+    let pTitle = prompt('수정할 제목을 입력하세요.')
+    let pContent = prompt('수정할 내용을 입력하세요.')
+    let nowDate = new Date();
+    let year = nowDate.getFullYear();
+    let month = nowDate.getMonth()+1;
+    let date = nowDate.getDate();
+    let view = info.조회수;
+    // 유효성 검사
+    if( !pTitle || !pContent ){ alert('수정할 내용을 입력해주세요.'); return;}
 
+    // console.log( pTitle );
+    // console.log( pContent );
+    let board = {
+        개인코드 : logInCode , 
+        작성일 : `${ year }-${ month }-${ date }(수정)` , 
+        제목 : pTitle , 
+        조회수 : view , 
+        내용 : pContent 
+    }
+    postArray[index] = board;
+    outputFunc()
+    pdetailFunc( index )
+    return;
+}
+
+function deleteFunc( index ){
+    postArray.splice( index , 1)
+    let postDetail = document.querySelector('#postDetail')
+
+    let html = `<fieldset>
+                    <legend><h2>상세페이지</h2></legend>
+                    <table class="pdetailTable" border="1">
+                        <tr>
+                            <th width="120px">제목</th>
+                            <td>게시물 제목</td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td><textarea>게시물 내용</textarea></td>
+                        </tr>
+                        <tr>
+                        <th>날짜 / 조회수</th>
+                        <td>/</td>
+                    </tr>
+                    </table>
+                </fieldset>`;
+    postDetail.innerHTML = html;
+
+    outputFunc()
+    return;
 }
