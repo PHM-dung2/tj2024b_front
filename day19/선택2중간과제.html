@@ -10,35 +10,61 @@
                 <legend><h2>회원가입</h2></legend>
                 <table>
                     <tr>
-                        <th>id : </th>
+                        <th>id  </th>
                         <td><input class="id" type="text"></td>
                     </tr>
                     <tr>
-                        <th>password : </th>
+                        <th>password  </th>
                         <td><input class="password" type="password"></td>
                     </tr>
                     <tr>
-                        <td class="joinBtn" colspan="2" align="center"><button onclick="joinFunc()" type="button">회원가입</button></td>
+                        <td class="joinBtn" align="center">
+                            <button onclick="joinFunc()" type="button">회원가입</button>
+                        </td>
+                        <td class="joinBtn" align="center">
+                            <button onclick="loginConnect()" type="button">로그인하기</button>
+                        </td>
                     </tr>
                 </table>
             </fieldset>
+        </div>
+
+        <div id="writePost">
+            
         </div>
 
         <div id="post">
             <fieldset>
                 <legend><h2>게시판</h2></legend>
                 <table class="postTable" border="1">
-                    <tr>
-                        <th>작성일</th>
-                        <th>제목</th>
-                        <th>조회수</th>
-                    </tr>
-                    <tr>
-                        <td>2014-11-25</td>
-                        <td>게시물 제목</td>
-                        <td>0</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>작성일</th>
+                            <th>제목</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody class="pTbody">
+                        <tr>
+                            <td>2014-11-25</td>
+                            <td>게시물 제목1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2014-11-26</td>
+                            <td>게시물 제목2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2014-11-27</td>
+                            <td>게시물 제목3</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
                 </table>
+                <div align="right">
+                    <button onclick="writeFunc()" >게시물 작성</button>
+                </div>
             </fieldset>
         </div>
 
@@ -47,11 +73,11 @@
                 <legend><h2>상세페이지</h2></legend>
                 <table class="postTable" border="1">
                     <tr>
-                        <th>제목 : </th>
+                        <th>제목</th>
                         <td>게시물 제목</td>
                     </tr>
                     <tr>
-                        <th>내용 : </th>
+                        <th>내용</th>
                         <td>게시물 내용</td>
                     </tr>
                 </table>

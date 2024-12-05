@@ -3,11 +3,12 @@ let join = [
     { 개인코드 : 2 , id : "zxcv" , password : "5678" } 
 ]
 let postArray = [
-    { 작성일 : "2014-11-25 " , 제목 : "게시물제목1" , 조회수 : "0"} ,
-    { 작성일 : "2014-11-26 " , 제목 : "게시물제목2" , 조회수 : "0"} ,
-    { 작성일 : "2014-11-27 " , 제목 : "게시물제목3" , 조회수 : "0"}
+    { 개인코드 : 1 , 작성일 : "2014-11-25 " , 제목 : "게시물제목1" , 조회수 : "0" , 내용 : "내용1" } ,
+    { 개인코드 : 2 , 작성일 : "2014-11-26 " , 제목 : "게시물제목2" , 조회수 : "0" , 내용 : "내용2" } ,
+    { 개인코드 : 1 , 작성일 : "2014-11-27 " , 제목 : "게시물제목3" , 조회수 : "0" , 내용 : "내용3" }
 ]
 
+// 회원정보 배열입력
 jno = 3;
 function joinFunc(){
     let id = document.querySelector('.id').value;
@@ -25,7 +26,135 @@ function joinFunc(){
     
     // 배열 추가
     join.push( info );
-    console.log( join );
-}
+    alert('회원가입을 축하합니다!')
 
-function writeFunc()
+    // input 창 비우기
+    document.querySelector('.id').value = ``;
+    document.querySelector('.password').value = ``;
+
+    console.log( join );
+} // f end
+
+// 로그인 화면 연결
+function loginConnect(){
+    let html=`<fieldset>
+                <legend><h2>로그인</h2></legend>
+                <table>
+                    <tr>
+                        <th>id  </th>
+                        <td><input class="id" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>password  </th>
+                        <td><input class="password" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td class="joinBtn" colspan="2" align="center">
+                            <button onclick="logInFunc()" type="button">로그인</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>`;
+    let join = document.querySelector('#join')
+
+    join.innerHTML = html;
+} // f end
+
+// 로그인
+let logInCode = '';
+let logIn = false;
+function logInFunc(){
+    let id = document.querySelector('.id').value;
+    let password = document.querySelector('.password').value;
+
+    let html = '';
+    for( let i = 0 ; i < join.length ; i++){
+        let info = join[i];
+        if( id == info.id && password == info.password ){
+            alert( '로그인 성공' );
+            logInCode = info.개인코드;
+            logIn = true;
+            break;
+        }
+    } // for end
+    if( logIn == false ) {alert( '로그인 실패' );}
+    console.log( logInCode );
+    console.log( logIn );
+    return;
+} // f end
+
+// 작성페이지 연결
+function writeFunc(){
+    // 유효성 검사
+    if( logIn == false ){ alert('로그인 후에 작성이 가능합니다.' ); return;}
+    
+    // 게시물 페이지 출력
+    let nowDate = new Date();
+    let year = nowDate.getFullYear();
+    let month = nowDate.getMonth();
+    let date = nowDate.getDate();
+
+    let html = `<fieldset>
+                    <legend> <h2>게시물 작성</h2> </legend>
+                    <div>작성일 : ${ year }-${ month }-${ date }</div>
+                    <table class="writeTable" border="1">
+                        <tr>
+                            <th>제목</th>
+                            <td><input class="pTitle" type="text"></input></td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td><textarea class="pContent"></textarea></td>
+                        </tr>
+                        
+                    </table>
+                    <div align="center">
+                        <button onclick="inputFunc()"type="button">등록</button>
+                    </div>
+                </fieldset>`;
+    let writePost = document.querySelector('#writePost');
+
+
+    writePost.innerHTML = html;
+    return;
+} // f end
+
+// 게시물 등록
+function inputFunc(){
+    let pTitle = document.querySelector('.pTitle').value;
+    let pContent = document.querySelector('.pContent').value;
+    let nowDate = new Date();
+    let year = nowDate.getFullYear();
+    let month = nowDate.getMonth();
+    let date = nowDate.getDate();
+    let view = 0;
+    // console.log( pTitle );
+    // console.log( pContent );
+    let info = {
+        개인코드 : logInCode , 
+        작성일 : `${ year }-${ month }-${ date }` , 
+        제목 : pTitle , 
+        조회수 : view , 
+        내용 : pContent 
+    }
+
+    return;
+} // f end
+
+// 게시물 출력
+function outputFunc(){
+    let pTbody = document.querySelector('.pTbody')
+    let html='';
+    
+    for( let i = 0 ; i < postArray.length ; i++){
+        let info = postArray[i];
+        html += `<tr>
+                    <td>${ year }-${ month }-${ date }</td>
+                    <td><a onclick="">게시물 제목1</a></td>
+                    <td>0</td>
+                </tr>`;
+    } // for end
+    
+    pTbody.innerHTML = html;
+    return;
+}
