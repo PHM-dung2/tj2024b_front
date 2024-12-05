@@ -1,0 +1,24 @@
+#wrap{
+    width: 400px;
+    margin: 0 auto;
+}
+#todoTop{ display: flex } 
+
+/* 입력 */
+.contentInput{
+    width: 300px;
+}
+.addBtn{
+    width: 100px;
+}
+
+
+
+
+.success{
+    color : white;
+}
+
+.success > .content{
+    text-decoration: line-through;
+}

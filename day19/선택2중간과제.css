@@ -1,0 +1,26 @@
+/* *{ border: 1px solid red; } */
+#wrap{
+
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* 회원가입 */
+#join{
+    display: flex; justify-content: center; 
+}
+#join table{
+    margin : 10px 175px; width: 350px;
+}
+#joi th,td{
+    margin : 20px
+}
+
+/* 게시판 */
+#post{ display: flex; justify-content: center; height: 350px;}
+.postTable{
+    width: 700px; border-collapse: collapse;
+}
+
+/* 상세페이지 */
+#postDetail{ display: flex; justify-content: center; height: 350px;}
