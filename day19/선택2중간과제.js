@@ -142,6 +142,7 @@ function inputFunc(){
 } // f end
 
 // 게시물 출력
+outputFunc()
 function outputFunc(){
     let pTbody = document.querySelector('.pTbody')
     let html='';
@@ -149,12 +150,39 @@ function outputFunc(){
     for( let i = 0 ; i < postArray.length ; i++){
         let info = postArray[i];
         html += `<tr>
-                    <td>${ year }-${ month }-${ date }</td>
-                    <td><a onclick="">게시물 제목1</a></td>
-                    <td>0</td>
+                    <td>${ info.작성일 }</td>
+                    <td><a onclick="pdatailFunc( ${ i } )">${ info.제목 }</a></td>
+                    <td>${ info.조회수 }</td>
                 </tr>`;
     } // for end
     
     pTbody.innerHTML = html;
     return;
+}
+
+// 상세페이지 연결
+function pdatailFunc( index ){
+    let info = postArray[index];
+    let html = `<fieldset>
+                <legend><h2>상세페이지</h2></legend>
+                <table class="pdetailTable" border="1">
+                    <tr>
+                        <th>제목</th>
+                        <td>${ info.제목 }</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td>${ info.내용 }</td>
+                    </tr>
+                </table>
+                <div align="right">
+                    <button onclick="" type="button">수정</button>
+                    <button onclick="" type="button">삭제</button>
+                </div>
+            </fieldset>`;
+    let postDetail = document.querySelector('#postDetail')
+
+    postDetail.innerHTML = html;
+
+
 }
