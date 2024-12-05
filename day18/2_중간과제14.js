@@ -159,37 +159,40 @@ function 재고등록함수( 재고도서코드 ){
     재고기록.sort((a,b) => a.도서코드 - b.도서코드 )
     console.log( 재고기록 )
     
-    재고출력함수( 재고도서코드 );
+    재고출력함수(  );
 } // f end
 
 재고출력함수( );
-function 재고출력함수( 재고도서코드 ){
+function 재고출력함수(  ){
     // 1. 어디에
     let tbody = document.querySelector('.tbody2')
     // 2. 무엇을
     let html = ``;
     let 현재재고량 = 0;
+    let 재고도서코드 = 1;
     
     for( let index = 0 ; index < 재고기록.length ; index++ ){
         let info = 재고기록[index];
-        if(!재고도서코드){ 재고도서코드 = 1;}
-        if( info.도서코드 == Number(재고도서코드) ){ 
+        if( info.도서코드 !== 재고도서코드 ){ 
+            재고도서코드 = info.도서코드;
+            현재재고량 = 0;
+        }
             현재재고량 += Number( info.변화량 ); 
-        }      
+            html += `<tr>
+                        <td>${ info.도서코드 }</td>
+                        <td>${ info.변화량 }</td>
+                        <td>${ 현재재고량 }</td>
+                        <td>${ info.상태 }</td>
+                        <td>${ info.정가 }</td>
+                        <td>${ info.입고날짜 }</td>
+                        <td>
+                            <button onclick=" 재고수정함수( ${ info.도서코드 } )" type="button">수정</button>
+                            <button onclick=" dltFunc2(${ index }) " type="button">삭제</button>
+                        </td>
+                    </tr>`;
         console.log(현재재고량)
 
-        html += `<tr>
-                    <td>${ info.도서코드 }</td>
-                    <td>${ info.변화량 }</td>
-                    <td>${ 현재재고량 }</td>
-                    <td>${ info.상태 }</td>
-                    <td>${ info.정가 }</td>
-                    <td>${ info.입고날짜 }</td>
-                    <td>
-                        <button onclick=" 재고수정함수( ${ info.도서코드 } )" type="button">수정</button>
-                        <button onclick=" dltFunc2(${ index }) " type="button">삭제</button>
-                    </td>
-                </tr>`;
+        
     } // for end
 
     // 3. 어떻게`

@@ -1,0 +1,44 @@
+/* 전체구역 */
+#wrap{
+    width: 400px;
+    margin : 0 auto;
+}
+#todoTop{ display: flex; }
+/* 입력상자 */
+.contentInput{
+    width: 300px;
+    padding: 15px;
+    border: none;
+    box-shadow: 0px 0px 3px #fd9696;
+}
+.contentInput:focus{
+    outline: 2px solid red;
+    outline: none;
+}
+
+/* 등록버튼 */
+.addBtn{
+    width: 100px;
+    padding: 15px;
+    border: none;
+    box-shadow: 0px 0px 3px #fd9696;
+}
+
+/* 할일구역 */
+.contentBox{
+    display: flex;
+    background-color: #fcecec;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 20px 0px;
+}
+
+/* 할일이 완료일 때 */
+.success{
+    background-color: #6c6c6c;
+    color: white;
+}
+.success > .content{
+    text-decoration: line-through;
+}
