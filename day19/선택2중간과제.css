@@ -37,6 +37,7 @@ th, td{
 .writeTable{ margin : 10px 0px; }
 
 /* 게시판 */
+.postTable{ margin-top: 10px;} 
 
 /* 상세페이지 */
 #postDetail{ display: flex; justify-content: center;}

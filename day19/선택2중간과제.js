@@ -22,6 +22,11 @@ function joinFunc(){
     // 유효성검사
     if( !id ){ alert('id를 입력하시오.'); return;}
     if( !password ){ alert('password를 입력하시오.'); return;}
+    // 중복검사
+    for( let i = 0 ; i < join.length ; i++){
+        let board = join[i];
+        if( id == board.id ){ alert('중복된 ID입니다.'); return; }
+    } // for end
     
     
     // 배열 추가
@@ -66,7 +71,7 @@ let logIn = false;
 function logInFunc(){
     let id = document.querySelector('.id').value;
     let password = document.querySelector('.password').value;
-
+    // 로그인 성공
     let html = '';
     for( let i = 0 ; i < join.length ; i++){
         let info = join[i];
@@ -77,14 +82,37 @@ function logInFunc(){
             break;
         }
     } // for end
-    if( logIn == false ) {alert( '로그인 실패' );}
     // 로그인 시도 후 초기화
     document.querySelector('.id').value = '';
     document.querySelector('.password').value = '';
+    
+    if( logIn == false ) {alert( '로그인 실패' );}
+    idMarkFunc()
 
     console.log( logInCode );
     console.log( logIn );
     return;
+} // f end
+
+// 로그인 표시
+function idMarkFunc(){
+    let idMark = document.querySelector('.idMark')
+    let html = `${join[ logInCode-1 ].id} 님 <button onclick="logOutFunc()" type="button" >로그아웃</button>`;
+
+    idMark.innerHTML = html;
+}
+
+//  로그아웃
+function logOutFunc(){
+    // 로그아웃 에/아니오
+    if( !confirm( '로그아웃 하시겠습니까?' )){ return; }
+
+    let idMark = document.querySelector('.idMark')
+    let html = ``;
+
+    idMark.innerHTML = html;
+    // id  초기화
+    logInCode = '';
 } // f end
 
 // 작성페이지 연결
@@ -134,6 +162,11 @@ function inputFunc(){
     let view = 0;
     // console.log( pTitle );
     // console.log( pContent );
+
+    // 유효성검사
+    if( !pTitle ){ alert( `제목을 작성해 주세요.` ); return; }
+    if( !pContent ){ alert( `내용을 작성해 주세요.` ); return; } 
+
     let info = {
         개인코드 : logInCode , 
         작성일 : `${ year }-${ month }-${ date }` , 
@@ -141,9 +174,15 @@ function inputFunc(){
         조회수 : view , 
         내용 : pContent 
     }
-    postArray.push( info );
-    console.log( postArray );
-    outputFunc()
+
+    // 등록 예/아니요 알림창
+    if(confirm('게시물을 등록하시겠습니까?')){ 
+        postArray.push( info );
+        console.log( postArray );
+        outputFunc()
+        alert('게시물이 등록되었습니다.')
+    } // if end
+    
 
     // 등록 후 페이지 넘어감
     let writePost = document.querySelector('#writePost');
