@@ -1,0 +1,17 @@
+/* *{ border: 1px solid red; } */
+ul{
+    list-style: none;
+}
+#wrap{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+fieldset{
+    width: 100%;
+    display: flex; 
+    justify-content: center; align-items: center;
+    flex-wrap: wrap;
+}
+#join div{ width: 40%; margin: 10px;}
+#join button{ width: 150px; margin: 30px; }
