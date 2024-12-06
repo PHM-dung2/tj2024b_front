@@ -277,6 +277,7 @@ function updateFunc( index ){
 }
 
 function deleteFunc( index ){
+    // 삭제 예/아니요
     if(!confirm('게시물을 삭제하시겠습니까?')){return};
     
     postArray.splice( index , 1)
