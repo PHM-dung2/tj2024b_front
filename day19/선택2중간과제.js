@@ -277,6 +277,8 @@ function updateFunc( index ){
 }
 
 function deleteFunc( index ){
+    if(!confirm('게시물을 삭제하시겠습니까?')){return};
+    
     postArray.splice( index , 1)
     let postDetail = document.querySelector('#postDetail')
 
