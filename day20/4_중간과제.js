@@ -2,7 +2,7 @@ let subType = [
     { 유형코드 : 1 , 구독형태 : "Free" , 용량 : "15GB" , 금액 : 0 , 인원 : 1 },
     { 유형코드 : 2 , 구독형태 : "Basic" , 용량 : "100GB" , 금액 : 2400 , 인원 : 5 },
     { 유형코드 : 3 , 구독형태 : "Standard" , 용량 : "200GB" , 금액 : 3700 , 인원 : 5 },
-    { 유형코드 : 4 , 구독형태 : "Primium" , 용량 : "2TB" , 금액 : 11900 , 인원 : 10 }
+    { 유형코드 : 4 , 구독형태 : "Premium" , 용량 : "2TB" , 금액 : 11900 , 인원 : 10 }
 ]
 
 // 회원가입페이지 연결
@@ -109,9 +109,115 @@ function returnFunc(){
     return joinList;
 } // f end
 
+// 매월 구독옵션페이지 연결
+monthFunc()
+function monthFunc(){
+    let html = `<fieldset>
+                <legend><h3>추가 저장용량 구매</h3></legend>
+                <form class="subtypeBtn">
+                        <button class="subtypeBtn1" onclick="monthFunc()" style="background-color: #c2e7ff;" type="button">매월</button>
+                        <button class="subtypeBtn2" onclick="yearFunc()" type="button">연간<div>최대 16% 절약</div></button>
+                </form>
+                <div>
+                    <ul>
+                        <li>Free (15 GB)</li>
+                        <li style="font-size: 25px;">현재</li>
+                        <li></li>
+                        <li></li>
+                        <li>1명 사용 가능</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
 
+                <div>
+                    <ul>
+                        <li>Basic (100 GB)</li>
+                        <li style="font-size: 25px;">￦2,400/월</li>
+                        <li></li>
+                        <li></li>
+                        <li>최대 5명과 저장소를 공유하세요.</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
 
-function Func(){
+                <div>
+                    <ul>
+                        <li>Standard (200 GB)</li>
+                        <li style="font-size: 25px;">￦3,700/월</li>
+                        <li></li>
+                        <li></li>
+                        <li>최대 5명과 저장소를 공유하세요.</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Premium (100 GB)</li>
+                        <li style="font-size: 25px;">￦11,900/월</li>
+                        <li></li>
+                        <li></li>
+                        <li>최대 10명과 저장소를 공유하세요.</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
+            </fieldset>`
+    document.querySelector('#service').innerHTML = html;
     return;
 }
 
+function yearFunc(){
+    html = `<fieldset>
+                <legend><h3>추가 저장용량 구매</h3></legend>
+                <form class="subtypeBtn">
+                        <button class="subtypeBtn1" onclick="monthFunc()" type="button">매월</button>
+                        <button class="subtypeBtn2" style="background-color: #c2e7ff;" onclick="yearFunc()" type="button">연간<div>최대 16% 절약</div></button>
+                </form>
+                <div>
+                    <ul>
+                        <li>Free (15 GB)</li>
+                        <li style="font-size: 25px;">현재</li>
+                        <li></li>
+                        <li></li>
+                        <li>1명 사용 가능</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Basic (100 GB)</li>
+                        <li style="text-decoration: line-through; color: gray; font-size: 25px;">￦28,800/년</li>
+                        <li style="font-size: 25px;">￦24,000/년</li>
+                        <li style="color: green;">최대 ￦4,800 절감</li>
+                        <li>최대 5명과 저장소를 공유하세요.</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Standard (200 GB)</li>
+                        <li style="text-decoration: line-through; color: gray; font-size: 25px;">￦44,400/년</li>
+                        <li style="font-size: 25px;">￦37,000/년</li>
+                        <li style="color: green;">최대 ￦7,400 절감</li>
+                        <li>최대 5명과 저장소를 공유하세요.</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Premium (100 GB)</li>
+                        <li style="text-decoration: line-through; color: gray; font-size: 25px;">￦142,800/년</li>
+                        <li style="font-size: 25px;">￦119,000/년</li>
+                        <li style="color: green;">최대 ￦23,800 절감</li>
+                        <li>최대 10명과 저장소를 공유하세요.</li>
+                        <li><button onclick="" type="button">구독하기</button></li>
+                    </ul>
+                </div>
+            </fieldset>`;
+    
+    document.querySelector('#service').innerHTML = html;
+    return;
+}
