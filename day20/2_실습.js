@@ -72,5 +72,5 @@ function 회원정보목록반환함수(){
         }
         console.log( memberList)
 
-    return memberLsit; // 함수가 종료되면서 함수를 호출했던것으로 반환/리턴 하는 값
+    return memberList; // 함수가 종료되면서 함수를 호출했던것으로 반환/리턴 하는 값
 } // f end
