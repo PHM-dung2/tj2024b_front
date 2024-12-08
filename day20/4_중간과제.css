@@ -44,6 +44,14 @@ fieldset{
     border-left: none;
 }
 
+#service .subLogin{
+    border: none;
+    width: 100%;
+    text-align: right;
+}
+#service .price{ font-size: 25px; }
+#service .sale{ text-decoration: line-through; color: gray; }
+#service .reduce{ color: green; }
 #service > fieldset > div{ 
     border: 1px solid rgb(105, 105, 105);
     width: 45%;
@@ -51,9 +59,9 @@ fieldset{
     border-radius: 15px;
 }
 #service > fieldset > div > ul > li > button{ 
-    border-radius: 15px; border : 1px solid rgb(105, 105, 105);
+    border-radius: 20px; border : 1px solid rgb(105, 105, 105);
     background-color: white ;
-    width: 100px; height: 30px;
+    width: 100px; height: 35px;
 }
 #service > fieldset > div > ul > li > button:hover{ 
     background-color: #0b57d0;
