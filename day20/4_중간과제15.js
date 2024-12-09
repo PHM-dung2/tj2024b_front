@@ -327,8 +327,8 @@ function yearFunc(){
                 </div>`
     } // if end
             html += `<form class="subtypeBtn">
-                        <button class="subtypeBtn1" onclick="monthFunc()" style="background-color: #c2e7ff;" type="button">매월</button>
-                        <button class="subtypeBtn2" onclick="yearFunc()" type="button">연간<div>최대 16% 절약</div></button>
+                        <button class="subtypeBtn1" onclick="monthFunc()" type="button">매월</button>
+                        <button class="subtypeBtn2" onclick="yearFunc()" style="background-color: #c2e7ff;" type="button">연간<div>최대 16% 절약</div></button>
                     </form>
                     <div>
                         <ul>
