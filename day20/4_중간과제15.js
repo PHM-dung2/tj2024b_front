@@ -183,7 +183,7 @@ function logoutFunc(){
     return;
 } // f end
 
-// 회원정보 수정페이지 연결
+// 회원정보 수정페이지 연결  
 function updateConnect(){
     let joinList = joinListFunc();
 
