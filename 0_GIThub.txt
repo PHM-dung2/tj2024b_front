@@ -115,7 +115,7 @@
 
 [ 학원 자리 변경 전 ]
     1. 개인 카카오톡 로그아웃
-    2. 인터넷( 네이버/github/페이스북 등등 ) 로그아웃
+    2. 인터넷/크롬/엣지 : ( 네이버/github/페이스북 등등 ) 로그아웃
     3. vscode , 이클립스 코드 최종 push 하기
     4. vscode github 회원정보 해제
         1. 제어판 , ( 윈도우 버튼 --> 자격증명관리자 )
@@ -123,8 +123,13 @@
         3. [ window 자격 증명 ] 클릭
         4. 하단에 일반 자격증명 목록 에서 github.com 클릭
         5. [ 제거 ]
+    5. vscode 오른쪽 하단에 유저아이콘 클릭 --> git계정명 --> 로그아웃
 
 [ 학원 자리 변경 후 ]
-    - vscode 터미널 git bash --> commit/push git 계정 정보 변경
-        git config --global user.name git아이디
-        git config --global user.email git이메일
+    1. vscode 실행
+    2. 새창 ---> git 리포지토리 복제
+    3. 깃허브 웹로그인창 --> 로그인
+    4.
+        - vscode 터미널 --> git bash --> commit/push git 계정 정보 변경
+            git config --global user.name git아이디
+            git config --global user.email git이메일
