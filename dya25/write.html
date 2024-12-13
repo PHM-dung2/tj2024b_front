@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+</head>
+<body>
+    
+    <div id="wrap">
+        <ul id="header">
+            <li> <a href="index.html">홈로고</a> </li>
+            <li> <a href="board.html">자유게시판</a> </li>
+        </ul>
+        <div id="container">
+            <h3>글쓰기</h3>
+        </div>
+        <div id="footer">
+
+            <form>
+                제목 : <input class="postTitle" type="text" /></br>
+                내용 : <textarea class="postContent" cols="22" rows="5"></textarea></br>
+                비밀번호 : <input class="postPassword" type="password" /></br>
+                <button onclick="postWriteFunc()" type="button">등록</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- JS 파일 호출 -->
+    <script src="/js/data.js"></script> <!-- 위에 -->
+    <script src="./js/write.js"></script>
+</body>
+</html>
