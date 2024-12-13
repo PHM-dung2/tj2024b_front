@@ -17,9 +17,14 @@ function postWriteFunc(){
     // localStorage 에 배열을 운영 하시오.
     let postArray = getPostArray();    // 1. 게시물 배열 호출
 
+    // 게시물 번호(식별자) , 만약에 게시물 배열이 존재하면 마지막게시물 번호+1 , 아니면 1(첫게시물)
+        // 배열변수면.lnegth-1 : 배열내 마지막요소의 인덱스번호
+    let bno = postArray.length != 0 ? postArray[ postArray.length-1].bno + 1 : 1;
+
 
     // 객체Object
     let board = {
+        bno : bno ,
         title : title ,
         content : content ,
         password : password ,
