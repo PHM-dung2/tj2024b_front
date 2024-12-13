@@ -21,7 +21,6 @@ function postWriteFunc(){
         // 배열변수면.lnegth-1 : 배열내 마지막요소의 인덱스번호
     let bno = postArray.length != 0 ? postArray[ postArray.length-1].bno + 1 : 1;
 
-
     // 객체Object
     let board = {
         bno : bno ,

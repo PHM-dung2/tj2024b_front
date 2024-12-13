@@ -9,7 +9,7 @@ function postListFunc(){  console.log('등록함수 실행')
             html += `<tr>
                         <td>${ board.date }</td>
                         <td>
-                            <a href="#">
+                            <a href="view.html?bno=${ board.bno }">
                                 ${ board.content }
                             <a>
                         </td>
